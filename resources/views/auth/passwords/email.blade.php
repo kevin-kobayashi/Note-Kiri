@@ -2,10 +2,15 @@
 
 @section('content')
 <div class="container">
+@component('layouts.header')
+@endcomponent
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header">
+                    <h1>{{ __('Reset your password') }}</h1>
+                    <p>Enter your email address and we will send you instructions to reset your password.</p>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -31,11 +36,17 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
+                        <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                                <button type="submit" class="btn btn-outline-success d-flex justify-content-center w-100">
+                                    {{ __('Continue') }}
                                 </button>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 offset-md-4">
+                            <a class="btn btn-link" href="{{ route('login') }}" role="button">{{ __('Back to Apps Client') }}</a>
                             </div>
                         </div>
                     </form>

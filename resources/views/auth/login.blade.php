@@ -1,11 +1,17 @@
 @extends('layouts.app')
 
+
 @section('content')
+
 <div class="container">
+@component('layouts.header')
+@endcomponent
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">
+                    {{ __('Welcome back') }}
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -53,7 +59,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <p>Don't have an account? <a class="btn btn-link" href="{{ route('register') }}">Sign up</a></p>
+                                <button type="submit" class="btn btn-outline-success">
                                     {{ __('Login') }}
                                 </button>
 
