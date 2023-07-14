@@ -26,6 +26,7 @@
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
+                                        <strong>メールアドレスに誤りがある可能性があります。</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -40,6 +41,7 @@
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
+                                        <strong>パスワードに誤りがある可能性があります。</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -52,6 +54,7 @@
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
+                                        <br>次回から自動的にログイン
                                     </label>
                                 </div>
                             </div>
@@ -59,7 +62,9 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <p>Don't have an account? <a class="btn btn-link" href="{{ route('register') }}">Sign up</a></p>
+
+                                <p>Don't have an account? <a class="btn btn-link" href="{{ route('register') }}">{{ __('Register') }}</a></p>
+
                                 <button type="submit" class="btn btn-outline-success">
                                     {{ __('Login') }}
                                 </button>
@@ -67,6 +72,7 @@
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
+                                        <br>パスワードをお忘れの場合
                                     </a>
                                 @endif
                             </div>

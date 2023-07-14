@@ -2,10 +2,15 @@
 
 @section('content')
 <div class="container">
+@component('layouts.header')
+@endcomponent
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">
+                    <h1>{{ __('Create your account') }}</h1>
+                    <p>Please note that email verification is required for sign-up.</p>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -20,6 +25,7 @@
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
+                                        <strong>氏名を入力してください</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -34,6 +40,7 @@
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
+                                        <strong>メールアドレスを入力してください</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -62,8 +69,9 @@
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-8 offset-md-4">
+                            <p>Already have an account?<a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a></p>
+                                <button type="submit" class="btn btn-outline-success d-flex justify-content-center w-75">
                                     {{ __('Register') }}
                                 </button>
                             </div>
