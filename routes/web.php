@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcomeNote-Kiri');
+    return view('intro');
 });
 
 Auth::routes();

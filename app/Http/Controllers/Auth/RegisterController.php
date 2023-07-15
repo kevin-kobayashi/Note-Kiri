@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/email/verify'; //アカウント作成後のリダイレクト先変更
 
     /**
      * Create a new controller instance.
@@ -52,8 +52,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:100', 'alpha_num:ascii'],
             'email' => ['regex:/^[A-Za-z0-9@._\-]+$/u', 'required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'confirmed', 'regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z\-] {8,24}$/'],
-            //半角英数字(A~Z,a~z,0~9)最低１つずつ含めた8文字以上24文字以内(記号はハイフンのみ) 
+            'password' => ['required', 'string', 'confirmed', 'regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,24}$/'],
+            //半角英数字(A~Z,a~z,0~9)最低１つずつ含めた8文字以上24文字以内(記号はハイフンと#) 
         ]);
     }
 
