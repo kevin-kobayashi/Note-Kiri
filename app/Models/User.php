@@ -24,6 +24,11 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new CustomResetPassword($token));
     }
 
+    public function articles()
+    {
+        return $this->hasMany('App\Models\Article');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
