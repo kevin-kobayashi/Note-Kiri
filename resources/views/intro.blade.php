@@ -16,7 +16,7 @@
                     </div>
                     <div class="mt-20 d-flex row align-items-center">
                         <div class="mr-1">
-                            <a class="btn btn-outline-danger" href="">Try NoteKiri</a>
+                            <a class="btn btn-outline-danger" href="{{route('articles.index')}}">Try NoteKiri</a>
                         </div>
                     </div>
                 </div>
