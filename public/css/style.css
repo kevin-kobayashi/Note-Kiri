@@ -10,6 +10,11 @@
     color: #ffffff;
 }
 
+.dark .container-fluid,
+.dark .container-fluid *{
+    color: #ffffff;
+}
+
 .container .card,
 .container .card *{
     color: #333;

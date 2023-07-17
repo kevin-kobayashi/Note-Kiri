@@ -60,7 +60,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="card-subtitle mb-2 text-muted">パスワードは半角英数字(A~Z,a~z,0~9)最低1つずつ含めた8~24文字、記号はハイフンとシャープのみ使用可能</div>
+                        <div id="passwordHelpBlock" class="form-text mb-2">パスワードは半角英数字(A~Z,a~z,0~9)最低1つずつ含めた8~24文字、記号はハイフンとシャープのみ使用可能</div>
 
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
