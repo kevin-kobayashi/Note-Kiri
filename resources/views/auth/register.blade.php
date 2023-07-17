@@ -25,7 +25,7 @@
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                        <strong>氏名を入力してください</strong>
+                                        <strong>半角英数字をお使い下さい</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -40,7 +40,7 @@
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                        <strong>メールアドレスを入力してください</strong>
+                                        <strong>既に登録済みの可能性があります。</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -55,10 +55,12 @@
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
+                                        <strong>下記に入力したものと一致していない可能性があります。</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
+                        <div class="card-subtitle mb-2 text-muted">パスワードは半角英数字(A~Z,a~z,0~9)最低1つずつ含めた8~24文字、記号はハイフンとシャープのみ使用可能</div>
 
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
