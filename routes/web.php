@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\Auth\VerificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('intro');
 });
+
+Route::get('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
 
 Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']);
 Auth::routes(['verify' => true]);
