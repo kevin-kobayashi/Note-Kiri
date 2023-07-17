@@ -8,7 +8,7 @@
 @endcomponent
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border-success">
                 <div class="card-header">
                     {{ __('Welcome back') }}
                 </div>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <!-- <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -58,12 +58,12 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
 
-                                <p>Don't have an account? <a class="btn btn-link" href="{{ route('register') }}">{{ __('Register') }}</a></p>
+                                <a class="btn btn-link" href="{{ route('register') }}">{{ __("Don't have an account?")}}</a>
 
                                 <button type="submit" class="btn btn-outline-success">
                                     {{ __('Login') }}

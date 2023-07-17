@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header">
                     <h1>{{ __('Create your account') }}</h1>
-                    <p>Please note that email verification is required for sign-up.</p>
+                    <p>{{__('Please note that email verification is required for sign-up.')}}</p>
                 </div>
 
                 <div class="card-body">
@@ -70,7 +70,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                            <p>Already have an account?<a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a></p>
+                            <p>{{ __('Already have an account?')}}<a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a></p>
                                 <button type="submit" class="btn btn-outline-success d-flex justify-content-center w-75">
                                     {{ __('Register') }}
                                 </button>

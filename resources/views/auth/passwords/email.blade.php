@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header">
                     <h1>{{ __('Reset your password') }}</h1>
-                    <p>Enter your email address and we will send you instructions to reset your password.</p>
+                    <p>{{__('Enter your email address and we will send you instructions to reset your password.')}}</p>
                 </div>
 
                 <div class="card-body">

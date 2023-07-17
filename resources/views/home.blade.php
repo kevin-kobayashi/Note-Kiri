@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Your password has been successfully changed and you are now logged in.') }}
+                    <a class="btn btn-outline-success mt-3" href="{{route('articles.index')}}">Try NoteKiri</a>
                 </div>
             </div>
         </div>

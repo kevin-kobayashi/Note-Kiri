@@ -5,8 +5,8 @@
 @component('layouts.header')
 @endcomponent
     <div class="pt-5">
-        <div class="d-flex flex-wrap me-1">
-            <div class="col-xs-6 col-md-5 col-lg-6 ">
+        <div class="d-flex flex-wrap mr-1 justify-content-center">
+            <div class="col-xs-6 col-md-8 col-lg-6 ">
                 <h1 class="fs-2 lh-lg">Introducing Note-Kiri</h1>
                 <div class="mt-4 fs-5 col-md-12">
                     <div>
