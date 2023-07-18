@@ -8,7 +8,7 @@
         <main class="col ps-md-2 pt-2">
             <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
             <div class="page-header pt-3">
-                <h2>{{ __('This is truly the Note-KIri main page.') }}</h2>
+                <h2>{{ __('This is  the Note-KIri main page.') }}</h2>
             </div>
             <p class="lead">A offcanvas "push" vertical nav menu example.</p>
             <hr>
