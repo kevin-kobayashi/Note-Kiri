@@ -12,17 +12,17 @@
                     <form action="">
                         @csrf
                         <div class="row mb-3">
-                            <label for="title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
+                            <label for="article-title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control" name="title">
+                                <input id="article-title" type="text" class="form-control bg-secondary bg-gradient" name="title">
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="content" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
+                            <label for="article-content" class="col-md-4 col-form-label text-md-end">{{ __('Content') }}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control" name="title">
+                                <textarea id="article-content" class="form-control bg-secondary bg-gradient" name="content" rows="10"></textarea>
                             </div>
                         </div>
                     </form>
