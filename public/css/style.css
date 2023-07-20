@@ -35,3 +35,10 @@ main header > h1 {
         overflow: hidden;
     }
 } */
+
+/* .fixed-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; 
+} */

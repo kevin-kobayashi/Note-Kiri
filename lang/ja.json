@@ -32,5 +32,8 @@
     "Your password has been successfully changed and you are now logged in.": "パスワードが無事に変更され、現在ログイン中です。",
     "This is  the Note-KIri main page.": "ここがNote-KIriメインページとなります。",
     "Title": "タイトル",
-    "Content": "内容"
+    "Content": "内容",
+    "Submit": "投稿",
+    "New Post": "新規投稿"
+    
 }

@@ -27,11 +27,14 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-lg btn-primary">{{ __('Submit') }} <i class="bi bi-chat-square-text"></i></button>
                             </div>
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="position-fixed bottom-0 end-0 mb-4 me-4">
+                <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
             </div>
         </main>
     </div>
