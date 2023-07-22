@@ -6,7 +6,10 @@
         @component('layouts.sidebar')
         @endcomponent
         <main class="col ps-md-2 pt-2">
+
+            <!-- サイドバーのトグルボタン -->
             <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
+
             <div class="flex p-4 align-baseline gap-6 py-6 m-auto">
                 <div class="border border-white p-3">
                     <form action="{{ route('articles.update', $article) }}" method="post">
@@ -36,6 +39,7 @@
                     </form>
                 </div>
             </div>
+            <!-- 新規投稿作成ボタン -->
             <div class="position-fixed bottom-0 end-0 mb-5 me-4">
                 <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
             </div>

@@ -12,6 +12,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // #articles/
     public function index()
     {
         
@@ -23,6 +24,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // #articles/create
     public function create()
     {
         return view('articles.create');
@@ -50,6 +52,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
+    // #articles/{id}
     public function show(Article $article)
     {
         return view('articles.show', compact('article'));
@@ -61,6 +64,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
+    // #articles/{id}/edit
     public function edit(Article $article)
     {
         return view('articles.edit', compact('article'));

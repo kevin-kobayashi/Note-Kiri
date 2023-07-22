@@ -50,10 +50,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:100', 'alpha_num:ascii'],
+            'name' => ['required', 'string', 'max:100', 'regex:/^[A-Za-z0-9@._\-]+$/'],
+            // 半角英数字
+
             'email' => ['regex:/^[A-Za-z0-9@._\-]+$/u', 'required', 'string', 'email', 'max:255', 'unique:users'],
+            // 特定の制御文字や空白文字などは含まれていない
+            
             'password' => ['required', 'string', 'confirmed', 'regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,24}$/'],
-            //半角英数字(A~Z,a~z,0~9)最低１つずつ含めた8文字以上24文字以内(記号はハイフンと#) 
+            // 半角英数字(A~Z,a~z,0~9)最低１つずつ含めた8文字以上24文字以内(記号はハイフンと#) 
         ]);
     }
 

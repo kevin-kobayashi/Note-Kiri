@@ -1,10 +1,13 @@
 .antialiased {
     -webkit-font-smoothing: antialiased;
 }
+
+/* 背景色 */
 .dark .antialiased{
     background-color: rgba(52, 53, 65, 1);
 }
 
+/* 文字の色 */
 .dark .container,
 .dark .container * {
     color: #ffffff;

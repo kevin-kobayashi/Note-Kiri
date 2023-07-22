@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    //サイドバーの投稿一覧
     public function boot()
     {
         view()->composer('layouts.sidebar', function ($view) {

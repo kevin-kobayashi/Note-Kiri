@@ -6,7 +6,10 @@
         @component('layouts.sidebar')
         @endcomponent
         <main class="col ps-md-2 pt-2">
+
+            <!-- サイドバーのトグルボタン -->
             <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
+
             <div class="page-header pt-3">
                 <h2>{{ __('This is  the Note-KIri main page.') }}</h2>
             </div>
@@ -18,6 +21,7 @@
                     <p>Ethical Kickstarter PBR asymmetrical lo-fi. Dreamcatcher street art Carles, stumptown gluten-free Kickstarter artisan Wes Anderson wolf pug. Godard sustainable you probably haven't heard of them, vegan farm-to-table Williamsburg slow-carb readymade disrupt deep v. Meggings seitan Wes Anderson semiotics, cliche American Apparel whatever. Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's Shoreditch selfies, forage fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.</p>
                 </div>
             </div>
+            <!-- 新規投稿作成ボタン -->
             <div class="position-fixed bottom-0 end-0 mb-5 me-4">
                 <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
             </div>

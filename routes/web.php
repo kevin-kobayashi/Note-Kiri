@@ -18,7 +18,7 @@ use App\Http\controllers\Auth\VerificationController;
 Route::get('/', function () {
     return view('intro');
 });
-
+// メールの認証期限(この)が
 Route::get('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
 
 Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']);
