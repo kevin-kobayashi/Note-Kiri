@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\SharedLinkController;
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\Auth\VerificationController;
@@ -25,3 +25,9 @@ Route::resource('articles', ArticleController::class)->middleware(['auth', 'veri
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// 共有リンクを生成するURL
+Route::get('/articles/{id}/share', [SharedLinkController::class, 'generateShareURL'])->name('articles.share');
+
+// 共有リンクを表示する新しいページ
+Route::get('/shared-articles/{id}', [SharedLinkController::class, 'showShared'])->name('shared.show');
