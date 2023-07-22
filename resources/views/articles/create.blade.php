@@ -22,14 +22,16 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="article-content" class="col-md-4 col-form-label text-md-end">{{ __('Content') }}</label>
+                            <!-- <label for="article-content" class="col-md-4 col-form-label text-md-end">{{ __('Content') }}</label> -->
 
-                            <div class="col-md-6">
-                                <textarea id="article-content" class="form-control bg-secondary bg-gradient" name="content" rows="10"></textarea>
+                            <div class="flex p-4 gap-4 m-auto">
+                                <div class="flex flex-grow flex-col gap-3">
+                                    <textarea id="article-content" class="form-control bg-secondary bg-gradient" name="content" rows="10"></textarea>
+                                </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 offset-md-4 text-end">
                                 <button type="submit" class="btn btn-lg btn-primary">{{ __('Submit') }} <i class="bi bi-chat-square-text"></i></button>
                             </div>
                         </div>
