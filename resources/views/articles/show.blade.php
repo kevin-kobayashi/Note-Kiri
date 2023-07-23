@@ -15,10 +15,10 @@
                     <h1 class="fw-bolder">{{ $article->title }}</h1>
                     <div class="d-flex pt-1 align-items-baseline">
                         <div>{{$article->updated_at->format('m d, Y')}}</div>
-                        <a href="{{ route('articles.edit', ['article' => $article->id]) }}" class="ms-1"><i class="bi bi-pencil-square"></i></a></span>
-                        <a href="{{ route('articles.share', ['id' => $article->id]) }}" class="btn btn-primary">共有</a>
+                        <a href="{{ route('articles.edit', ['article' => $article->id]) }}" class="ms-auto"><i class="bi fs-1 bi-pencil-square"></i></a>
+                        <a href="{{ route('articles.share', ['id' => $article->id]) }}" target="_blank" class="ms-2"><i class="bi fs-1 bi-share"></i></a>
                         
-                        <a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $article->id }}"><i class="bi fs-1 bi-trash"></i></a>
+                        <a class="ms-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $article->id }}"><i class="bi fs-1 bi-trash"></i></a>
                     </div>
                 </div>
             </div>

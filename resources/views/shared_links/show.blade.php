@@ -10,7 +10,7 @@
                     <div class="d-flex pt-1 align-items-baseline">
                         <div>{{$article->updated_at->format('m d, Y')}}</div>
                         <!-- フォームのURL入力欄 -->
-                        <input type="text" name="url" value="{{ $sharedLink }}" readonly>
+                        <p class="ms-2">共有リンク：</p><input type="text" name="url" value="{{ $sharedLink }}" readonly>
                     </div>
                 </div>
             </div>
