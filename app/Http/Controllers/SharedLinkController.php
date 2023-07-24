@@ -20,7 +20,9 @@ class SharedLinkController extends Controller
             return redirect($shareURL);
         } else {
             // 署名つきURLを生成
-            $shareURL = URL::temporarySignedRoute('shared.show', now()->addHours(24), ['id' => $article->id]);
+            // $shareURL = URL::temporarySignedRoute('shared.show', now()->addHours(12), ['id' => $article->id]);
+            $shareURL = URL::signedRoute('shared.show', ['id' => $article->id]);
+
     
             // 共有リンクを保存
             $sharedLink = new SharedLink();
