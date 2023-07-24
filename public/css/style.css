@@ -17,6 +17,7 @@
 .dark .container-fluid * ,
 .dark .container-fluid .form-control:focus{
     color: #ffffff;
+    
 }
 
 .container .card,
