@@ -27,12 +27,12 @@
 
                             <div class="flex p-4 gap-4 m-auto">
                                 <div class="flex flex-grow flex-col gap-3">
-                                    <textarea id="article-content" class="form-control bg-secondary bg-gradient" name="content" rows="10">{{ str_replace('<br>', "\n", $article->content) }}</textarea>
+                                    <textarea id="article-content" class="form-control bg-secondary bg-gradient" name="content" rows="15">{{ str_replace('<br>', "\n", $article->content) }}</textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4 text-end">
+                            <div class="col-md-6 offset-md-4 text-start">
                                 <button type="submit" class="btn btn-lg btn-primary">{{ __('Submit') }} <i class="bi bi-chat-square-text"></i></button>
                             </div>
                         </div>
