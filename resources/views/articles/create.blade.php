@@ -18,7 +18,7 @@
                             <label for="article-title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="article-title" type="text" class="form-control bg-secondary bg-gradient" name="title">
+                                <input id="article-title" type="text" class="form-control bg-dark bg-gradient" name="title">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -26,7 +26,7 @@
 
                             <div class="flex p-4 gap-4 m-auto">
                                 <div class="flex flex-grow flex-col gap-3">
-                                    <textarea id="article-content" class="form-control bg-secondary bg-gradient" name="content" rows="15"></textarea>
+                                    <textarea id="article-content" class="form-control bg-dark bg-gradient" name="content" rows="15"></textarea>
                                 </div>
                             </div>
                         </div>
