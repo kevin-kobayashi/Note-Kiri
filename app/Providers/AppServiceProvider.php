@@ -28,12 +28,13 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('layouts.sidebar', function ($view) {
             // 最新の記事を取得して渡す
-            $latestArticles = Article::orderBy('updated_at', 'desc')->get();
+            $user = Auth::user();
+            $latestArticles = $user->articles()->orderBy('updated_at', 'desc')->get();
             $view->with('latestArticles', $latestArticles);
 
             // ログインしているユーザーの情報を取得してユーザー名を渡す
             if (Auth::check()) {
-                $username = Auth::user()->name; // もしくは適切なフィールドを使用
+                $username = $user->name; // もしくは適切なフィールドを使用
                 $view->with('username', $username);
             }
         });
