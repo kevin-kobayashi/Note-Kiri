@@ -28,14 +28,14 @@
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="general">
                   <!-- ページ1の内容 -->
-                  <div class="d-flex flex-column">
+                  <!-- <div class="d-flex flex-column">
                     <div class="pb-3">
                       <div class="d-flex align-items-center justify-content-between">
                         <div>{{__('Clear all articles')}}</div>
                         <button class="btn btn-danger" data-bs-target="#removeAllModal" data-bs-toggle="modal">{{__('Clear')}}</button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="tab-pane fade" id="database">
                   <!-- ページ2の内容 -->
@@ -52,4 +52,3 @@
     </div>
   </div>
 </div>
-@include('modals.remove_all')
