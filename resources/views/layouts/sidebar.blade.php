@@ -16,8 +16,7 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-box-arrow-right"></i> {{ __('Logout') }}</a></li>
                     <li><hr class="dropdown-divider border-danger"></li>
-                    <li><a class="dropdown-item" href="#">Action two</a></li>
-                    <li><a class="dropdown-item" href="#">Action three</a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userSettings"><i class="bi bi-gear-wide-connected"></i> {{__('Settings')}}</a></li>
                 </ul>
             </div>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -26,3 +25,4 @@
         </nav>
     </div>
 </div>
+@include('modals.settings')
