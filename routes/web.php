@@ -21,6 +21,8 @@ Route::get('/', function () {
 // メールの認証期限(この)が
 Route::get('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
 
+Route::delete('/articles/removeAll', [ArticleController::class, 'removeAll'])->name('articles.removeAll');
+
 Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']);
 Auth::routes(['verify' => true]);
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
@@ -38,9 +39,11 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         $article = new Article();
         $article->title = $request->input('title');
         $article->content = $request->input('content');
+        $article->user_id = $user->id;
         $article->save();
 
         return redirect()->route('articles.show', $article->id);
@@ -96,6 +99,14 @@ class ArticleController extends Controller
     {
         $article->delete();
         
+        return redirect()->route('articles.index');
+    }
+
+    public function removeAll()
+    {
+        $user = Auth::user();
+        $user->articles()->delete();
+
         return redirect()->route('articles.index');
     }
 }
