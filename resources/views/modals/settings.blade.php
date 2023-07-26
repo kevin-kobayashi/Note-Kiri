@@ -14,7 +14,7 @@
           <div class="row">
             <!-- ページ切り替え用のナビゲーション -->
             <div class="col-md-4">
-              <ul class="nav nav-tabs border-bottom-0">
+              <ul class="nav nav-tabs border-bottom-0 gap-3">
                 <li class="nav-item">
                   <a class="nav-link active rounded" data-bs-toggle="tab" href="#general"><i class="bi bi-gear"></i>  {{__('General')}}</a>
                 </li>
