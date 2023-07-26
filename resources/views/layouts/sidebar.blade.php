@@ -1,4 +1,4 @@
-<div class="col-auto px-0 pt-2">
+<div class="col-auto px-0 pt-2" style="max-width: 150px;">
     <div id="sidebar" class="collapse collapse-horizontal show border-end border-bottom">
         <nav class="d-flex flex-column">
             <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start overflow-y-auto" style="max-height: 80vh;">
@@ -22,6 +22,8 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
+            @component('tools.dice_roll')
+            @endcomponent
         </nav>
     </div>
 </div>
