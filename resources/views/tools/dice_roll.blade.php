@@ -1,5 +1,5 @@
 <div class="pt-3 px-1 d-flex flex-column">
-    <h4> <!-- "me-3" クラスは右側の余白を追加します -->
+    <h4> 
         <form name="diceall" class="d-flex justify-content-center align-items-center mb-2">
             <select id="roll" name="roll" class="bg-dark">
                 <option value="1">1</option>
@@ -9,7 +9,7 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-            <span class="mx-2">D</span> <!-- "me-2" クラスは右側の余白を追加します -->
+            <span class="mx-2">D</span>
             <select id="men" name="men" class="bg-dark">
                 <option value="2">2</option>
                 <option value="3">3</option>
