@@ -49,10 +49,13 @@ class SharedLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+    // public function index()
+    // {
+    //     // 認証済みユーザーの記事一覧を取得
+    //     $articles = Articles::where('user_id', auth()->id())->get();
+
+
+    // }
 
     /**
      * Show the form for creating a new resource.
