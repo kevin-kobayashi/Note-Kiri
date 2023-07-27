@@ -3,7 +3,7 @@
 }
 
 /* 背景色 */
-.dark .antialiased{
+.dark body {
     background-color: rgba(52, 53, 65, 1);
 }
 
@@ -14,14 +14,14 @@
 }
 
 .dark .container-fluid,
-.dark .container-fluid * ,
-.dark .container-fluid .form-control:focus{
+.dark .container-fluid *,
+.dark .container-fluid .form-control:focus {
     color: #ffffff;
-    
+
 }
 
 .container .card,
-.container .card *{
+.container .card * {
     color: #333;
 }
 
@@ -29,7 +29,7 @@
     color: #ffffff;
 } */
 
-main header > h1 {
+main header>h1 {
     font-weight: bold !important;
     font-size: 28px !important;
 }
@@ -45,4 +45,23 @@ main header > h1 {
     bottom: 20px;
     right: 20px;
     z-index: 9999; 
+} */
+
+/* .slot {
+    width: 90%;
+    height: 50px;
+    overflow: hidden;
+    margin: auto;
+    border: solid 1px #fff;
+}
+.slot-frame {
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    border : solid 1px #fff ;
+}
+
+.reels{
+    width: 31%;
+    position: absolute;
 } */
