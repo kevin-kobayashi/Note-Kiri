@@ -38,12 +38,14 @@
         </ul>
     </div>
 </div>
-<div>
-    <button type="button" class="btn-start">start</button>
-    <button type="button" class="btn-reset" disabled="true">reset</button>
-</div>
-<div>
-    <button type="button" class="btn-stop" data-val="0" disabled="true">stop 0</button>
-    <button type="button" class="btn-stop" data-val="1" disabled="true">stop 1</button>
-    <button type="button" class="btn-stop" data-val="2" disabled="true">stop 2</button>
+<div class="m-auto my-3">
+    <div>
+        <button type="button" class="btn btn-outline-primary btn-start"><i class="bi bi-play"></i></button>
+        <button type="button" class="btn btn-outline-primary btn-reset" disabled="true"><i class="bi bi-arrow-counterclockwise"></i></button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-outline-danger btn-stop" data-val="0" disabled="true"><i class="bi bi-circle-fill"></i></button>
+        <button type="button" class="btn btn-outline-danger btn-stop" data-val="1" disabled="true"><i class="bi bi-circle-fill"></i></button>
+        <button type="button" class="btn btn-outline-danger btn-stop" data-val="2" disabled="true"><i class="bi bi-circle-fill"></i></button>
+    </div>
 </div>
