@@ -34,20 +34,9 @@ main header>h1 {
     font-size: 28px !important;
 }
 
-/* @media (max-width: 767.98px) {
-    .container-fluid .col-auto {
-        overflow: hidden;
-    }
-} */
 
-/* .fixed-bottom-right {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999; 
-} */
 
-/* .slot {
+.slot {
     width: 90%;
     height: 50px;
     overflow: hidden;
@@ -62,6 +51,24 @@ main header>h1 {
 }
 
 .reels{
-    width: 31%;
+    width: 33.333%;
     position: absolute;
-} */
+    padding-left: 15px;
+}
+
+
+.reels:nth-child(2) {
+    left: 33.333%;
+}
+.reels:nth-child(3) {
+    left: 66.666%;
+}
+
+.reel {
+    height: 25px;
+}
+
+.reel img {
+    display: block;
+    width: 20px;
+}

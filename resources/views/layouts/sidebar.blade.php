@@ -24,8 +24,8 @@
             </form>
             @component('tools.dice_roll')
             @endcomponent
-            <!-- @component('tools.slot')
-            @endcomponent -->
+            @component('tools.slot')
+            @endcomponent
         </nav>
     </div>
 </div>

@@ -1,37 +1,40 @@
-<div class="slot" id="slotArea">
+<div class="slot">
     <div class="slot-frame">
         <ul class="reels" style="list-style: none;">
+            <li class="reel"><img src="{{ asset('img/currency-bitcoin.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/bell-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/x-diamond-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/suit-heart-fill.svg') }}" alt=""></li>
-            <li class="reel"><i class="bi bi-star-half" aria-hidden="true"></i></li>
-            <li class="reel"><i class="bi bi-sun-fill" aria-hidden="true"></i></li>
-            <li class="reel"><img src="{{ asset('img/7-circle.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/star-fill.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/yin-yang.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/currency-bitcoin.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/bell-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/x-diamond-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/suit-heart-fill.svg') }}" alt=""></li>
         </ul>
         <ul class="reels" style="list-style: none;">
+            <li class="reel"><img src="{{ asset('img/currency-bitcoin.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/x-diamond-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/suit-heart-fill.svg') }}" alt=""></li>
-            <li class="reel"><i class="bi bi-star-half" aria-hidden="true"></i></li>
-            <li class="reel"><i class="bi bi-sun-fill" aria-hidden="true"></i></li>
+            <li class="reel"><img src="{{ asset('img/star-fill.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/yin-yang.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/bell-fill.svg') }}" alt=""></li>
-            <li class="reel"><img src="{{ asset('img/7-circle.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/currency-bitcoin.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/x-diamond-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/suit-heart-fill.svg') }}" alt=""></li>
-            <li class="reel"><i class="bi bi-star-half" aria-hidden="true"></i></li>
+            <li class="reel"><img src="{{ asset('img/star-fill.svg') }}" alt=""></li>
         </ul>
         <ul class="reels" style="list-style: none;">
+            <li class="reel"><img src="{{ asset('img/currency-bitcoin.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/suit-heart-fill.svg') }}" alt=""></li>
-            <li class="reel"><i class="bi bi-star-half" aria-hidden="true"></i></li>
-            <li class="reel"><i class="bi bi-sun-fill" aria-hidden="true"></i></li>
+            <li class="reel"><img src="{{ asset('img/star-fill.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/yin-yang.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/bell-fill.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/x-diamond-fill.svg') }}" alt=""></li>
-            <li class="reel"><img src="{{ asset('img/7-circle.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/currency-bitcoin.svg') }}" alt=""></li>
             <li class="reel"><img src="{{ asset('img/suit-heart-fill.svg') }}" alt=""></li>
-            <li class="reel"><i class="bi bi-star-half" aria-hidden="true"></i></li>
-            <li class="reel"><i class="bi bi-sun-fill" aria-hidden="true"></i></li>
+            <li class="reel"><img src="{{ asset('img/star-fill.svg') }}" alt=""></li>
+            <li class="reel"><img src="{{ asset('img/yin-yang.svg') }}" alt=""></li>
         </ul>
     </div>
 </div>
