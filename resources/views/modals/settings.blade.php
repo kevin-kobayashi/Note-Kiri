@@ -39,12 +39,17 @@
                 </div>
                 <div class="tab-pane fade" id="database">
                   <!-- ページ2の内容 -->
-                  <h3>ページ2の内容</h3>
-                  <p>ここにページ2のコンテンツが入ります。</p>
+                  <div class="d-flex flex-column">
+                    <div class="pb-3">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div>{{__('Shared links')}}</div>
+                        <button class="btn btn-danger" data-bs-target="#sharedLinksModal" data-bs-toggle="modal">{{__('Manage')}}</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
