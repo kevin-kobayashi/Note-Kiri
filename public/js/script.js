@@ -32,7 +32,7 @@ function getDiceall() {
     /*
      * スロットのリール回転速度(実行毎秒数)
      */
-    var sec = 30;
+    var sec = 50;
 
     /*
      * スロットのリール情報
