@@ -40,8 +40,8 @@
 </div>
 <div class="m-auto my-3">
     <div>
-        <button type="button" class="btn btn-outline-primary btn-start"><i class="bi bi-play"></i></button>
-        <button type="button" class="btn btn-outline-primary btn-reset" disabled="true"><i class="bi bi-arrow-counterclockwise"></i></button>
+        <button type="button" class="btn btn-outline-primary btn-start"><i class="bi fs-1 bi-play"></i></button>
+        <button type="button" class="btn btn-outline-primary btn-reset" disabled="true"><i class="bi fs-1 bi-arrow-counterclockwise"></i></button>
     </div>
     <div>
         <button type="button" class="btn btn-outline-danger btn-stop" data-val="0" disabled="true"><i class="bi bi-circle-fill"></i></button>
