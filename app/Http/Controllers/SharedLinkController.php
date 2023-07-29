@@ -49,13 +49,26 @@ class SharedLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     // 認証済みユーザーの記事一覧を取得
-    //     $articles = Articles::where('user_id', auth()->id())->get();
+    public function getSharedLinks()
+    {
+        $userId = auth()->id(); // ログインユーザーのIDを取得
 
+        // ログインユーザーが共有したリンクを取得
+        $articles = Article::where('user_id', $userId)->with('shared_link')->get();
 
-    // }
+        $sharedLinksData = [];
+        foreach ($articles as $article) {
+            if ($article->shared_link) {
+                $sharedLinkData = [
+                    'article_title' => $article->title,
+                    'shared_at' => $article->shared_link->created_at,
+                    'article_url' => route('articles.show', $article->id), // 記事の詳細ページへのリンク
+                    'shared_url' =>route('shared.show', $article->id),
+                ];
+            }
+        }
+        return response()->json($sharedLinksData);
+    }
 
     /**
      * Show the form for creating a new resource.
