@@ -13,7 +13,7 @@
                 <form action="{{ route('articles.removeAll') }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">削除する</button>
+                    <button type="submit" class="btn btn-danger">一括削除する</button>
                 </form>
             </div>
         </div>
