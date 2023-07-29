@@ -19,17 +19,32 @@ Route::get('/', function () {
     return view('intro');
 });
 // メールの認証期限(この)が
-Route::get('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
+Route::get('/email/resend', [VerificationController::class, 'resend'])
+    ->name('verification.resend');
 
-Route::delete('/articles/removeAll', [ArticleController::class, 'removeAll'])->name('articles.removeAll');
+//サイドバーに表示されている記事を一括で削除する
+Route::delete('/articles/removeAll', [ArticleController::class, 'removeAll'])
+    ->name('articles.removeAll')
+    ->middleware(['auth', 'verified']);
 
-Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']);
+Route::resource('articles', ArticleController::class)
+    ->middleware(['auth', 'verified']);
+
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
+    ->name('home');
 
-// 共有リンクを生成するURL
-Route::get('/articles/{id}/share', [SharedLinkController::class, 'generateShareURL'])->name('articles.share');
+// 共有リンクを生成するURL（POSTリクエスト）
+Route::post('/articles/{id}/share', [SharedLinkController::class, 'generateShareURL'])
+    ->name('articles.share')
+    ->middleware(['auth', 'verified']);
 
 // 共有リンクを表示する新しいページ
-Route::get('/shared-articles/{id}', [SharedLinkController::class, 'showShared'])->name('shared.show');
+Route::get('/shared-articles/{id}', [SharedLinkController::class, 'showShared'])
+    ->name('shared.show')
+    ->middleware(['auth', 'verified']);
+
+Route::get('/shared-links', [SharedLinkController::class, 'getSharedLinks'])
+    ->name('shared-links')
+    ->middleware(['auth', 'verified']);
