@@ -184,3 +184,23 @@ $(document).ready(function () {
         Slot.stop($(this).attr('data-val'));
     });
 });
+
+// 共有リンク一覧モーダル
+$('#sharedLinksModal').on('show.bs.modal', function () {
+    $.ajax({
+        url: "{{ route('shared-links') }}", // 共有リンク一覧を取得するルートのURL
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            var sharedLinksList = $('#sharedLinksList');
+            sharedLinksList.empty(); // 一旦リストを空にする
+
+            data.forEach(function (link) {
+                sharedLinksList.append('<li>' + link.article_id + '</li>');
+            });
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
