@@ -186,21 +186,30 @@ $(document).ready(function () {
 });
 
 // 共有リンク一覧モーダル
-$('#sharedLinksModal').on('show.bs.modal', function () {
-    $.ajax({
-        url: "{{ route('shared-links') }}", // 共有リンク一覧を取得するルートのURL
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            var sharedLinksList = $('#sharedLinksList');
-            sharedLinksList.empty(); // 一旦リストを空にする
+// モーダルが表示される前にAjaxリクエストを行う
+// $('#sharedLinksModal').on('show.bs.modal', function () {
+//     $.ajax({
+//         url: "{{ route('shared-links') }}", // 共有リンク一覧を取得するルートのURL
+//         type: "GET",
+//         dataType: "json",
+//         success: function (data) {
+//             var sharedLinksList = $('#sharedLinksList');
+//             sharedLinksList.empty(); // 一旦リストを空にする
 
-            data.forEach(function (link) {
-                sharedLinksList.append('<li>' + link.article_id + '</li>');
-            });
-        },
-        error: function (error) {
-            console.log(error);
-        }
-    });
-});
+//             data.forEach(function (link) {
+//                 var listItem = '<li>' +
+//                     '<a href="' + link.shared_url + '">' +
+//                     '<i class="bi bi-link-45deg"></i>' +
+//                     link.article_title + '</a>' +
+//                     '<spam class="ms-2">' + link.shared_at + '</spam>' +
+//                     '<a class="ms-auto" href="' + link.article_url + '">' +
+//                     '<i class="bi bi-chat-left"></i>' + '</a>' +
+//                     '</li>';
+//                 sharedLinksList.append(listItem);
+//             });
+//         },
+//         error: function (error) {
+//             console.log(error);
+//         }
+//     });
+// });
