@@ -53,21 +53,10 @@ class SharedLinkController extends Controller
     {
         $userId = auth()->id(); // ログインユーザーのIDを取得
 
-        // ログインユーザーが共有したリンクを取得
-        $articles = Article::where('user_id', $userId)->with('shared_link')->get();
+        // ログインユーザーが共有リンクを持つ記事の情報を取得
+        $articles = Article::where('user_id', $userId)->has('shared_link')->with('shared_link')->get();
 
-        $sharedLinksData = [];
-        foreach ($articles as $article) {
-            if ($article->shared_link) {
-                $sharedLinkData = [
-                    'article_title' => $article->title,
-                    'shared_at' => $article->shared_link->created_at,
-                    'article_url' => route('articles.show', $article->id), // 記事の詳細ページへのリンク
-                    'shared_url' =>route('shared.show', $article->id),
-                ];
-            }
-        }
-        return response()->json($sharedLinksData);
+        return view('shared_links.index', compact('articles'));
     }
 
     /**

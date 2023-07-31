@@ -42,9 +42,8 @@ Route::post('/articles/{id}/share', [SharedLinkController::class, 'generateShare
 
 // 共有リンクを表示する新しいページ
 Route::get('/shared-articles/{id}', [SharedLinkController::class, 'showShared'])
-    ->name('shared.show')
-    ->middleware(['auth', 'verified']);
+    ->name('shared.show');
 
-Route::get('/shared-links', [SharedLinkController::class, 'getSharedLinks'])
-    ->name('shared-links')
+Route::get('/shared-articles', [SharedLinkController::class, 'getSharedLinks'])
+    ->name('shared.index')
     ->middleware(['auth', 'verified']);

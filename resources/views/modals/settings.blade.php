@@ -32,7 +32,7 @@
                     <div class="pb-3">
                       <div class="d-flex align-items-center justify-content-between">
                         <div>{{__('Clear all articles')}}</div>
-                        <button class="btn btn-danger" data-bs-target="#removeAllModal" data-bs-toggle="modal">{{__('Clear')}}</button>
+                        <button class="btn btn-danger" data-bs-target="#removeAllArticlesModal" data-bs-toggle="modal">{{__('Clear')}}</button>
                       </div>
                     </div>
                   </div>
@@ -43,7 +43,7 @@
                     <div class="pb-3">
                       <div class="d-flex align-items-center justify-content-between">
                         <div>{{__('Shared links')}}</div>
-                        <button class="btn btn-danger" data-bs-target="#sharedLinksModal" data-bs-toggle="modal">{{__('Manage')}}</button>
+                        <a href="{{ route('shared.index') }}" class="btn btn-primary">{{__('Manage')}}</a>
                       </div>
                     </div>
                   </div>
@@ -57,4 +57,4 @@
     </div>
   </div>
 </div>
-@include('modals.remove_all')
+@include('modals.remove_all_articles')
