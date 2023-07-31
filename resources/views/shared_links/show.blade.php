@@ -9,7 +9,7 @@
                     <h1 class="fw-bolder">{{ $article->title }}</h1>
                     <div class="d-flex pt-1 align-items-baseline">
                         <div>{{$article->updated_at->format('m d, Y')}}</div>
-                        <!-- フォームのURL入力欄 -->
+                        <!-- フォームのURL出力欄 -->
                         <p class="ms-2">{{__('shared link:')}}</p><input class="text-info-emphasis" type="text" name="url" value="{{ $sharedLink }}" readonly>
                     </div>
                 </div>
