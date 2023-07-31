@@ -1,8 +1,8 @@
-<div class="modal" id="removeAllModal" tabindex="-1" aria-labelledby="removeAllModalLabel" aria-hidden="true">
+<div class="modal" id="removeAllArticlesModal" tabindex="-1" aria-labelledby="removeAllArticlesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content bg-dark">
             <div class="modal-header">
-                <h5 class="modal-title" id="removeAllModalLabel">削除確認</h5>
+                <h5 class="modal-title" id="removeAllArticlesModalLabel">削除確認</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
