@@ -16,7 +16,7 @@
                     <div class="d-flex pt-1 align-items-baseline">
                         <div>{{$article->updated_at->format('m d, Y')}}</div>
                         <a href="{{ route('articles.edit', ['article' => $article->id]) }}" class="ms-auto"><i class="bi fs-1 bi-pencil-square"></i></a>
-                        <form action="{{ route('articles.share', ['id' => $article->id]) }}" method="post">
+                        <form action="{{ route('articles.share', ['id' => $article->id]) }}" method="post" target="_blank">
                             @csrf
                             <button type="submit" class="ms-2 bg-transparent"><i class="bi fs-1 bi-share"></i></button>
                         </form>
