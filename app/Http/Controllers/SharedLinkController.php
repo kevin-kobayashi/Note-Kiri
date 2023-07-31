@@ -29,7 +29,7 @@ class SharedLinkController extends Controller
             $sharedLink->shared_link = $shareURL;
             $article->shared_link()->save($sharedLink);
     
-            return redirect()->route('shared.show', ['id' => $article->id]);
+            return redirect($shareURL);
         }
     }
 
