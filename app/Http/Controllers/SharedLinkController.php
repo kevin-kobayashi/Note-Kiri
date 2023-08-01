@@ -116,7 +116,7 @@ class SharedLinkController extends Controller
      */
     public function update(Request $request, SharedLink $sharedLink)
     {
-        //
+        
     }
 
     /**
@@ -125,8 +125,18 @@ class SharedLinkController extends Controller
      * @param  \App\Models\SharedLink  $sharedLink
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SharedLink $sharedLink)
+    public function destroy($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        $article->shared_link->delete();
+        return redirect()->route('shared.index');
+    }
+
+    public function removeAll()
+    {
+        $user = Auth::user();
+        $user->articles()->shared_link()->delete();
+
+        return redirect()->route('shared.index');
     }
 }

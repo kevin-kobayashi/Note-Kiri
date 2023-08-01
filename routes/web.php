@@ -45,6 +45,17 @@ Route::get('/shared-articles/{id}', [SharedLinkController::class, 'showShared'])
     ->name('shared.show')
     ->middleware('signed');
 
+// 共有リンク一覧を表示するページ
 Route::get('/shared-articles', [SharedLinkController::class, 'getSharedLinks'])
     ->name('shared.index')
+    ->middleware(['auth', 'verified']);
+
+// 共有リンク一覧を一括削除
+Route::delete('/shared-articles/removeAll', [SharedLinkController::class, 'removeAll'])
+    ->name('shared.removeAll')
+    ->middleware(['auth', 'verified']);
+
+//  共有リンクの個別削除ルート
+Route::delete('/shared-articles/{id}', [SharedLinkController::class, 'destroy'])
+    ->name('shared.delete')
     ->middleware(['auth', 'verified']);
