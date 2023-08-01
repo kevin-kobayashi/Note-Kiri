@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\URL;
 use App\Models\Article;
 use App\Models\SharedLink;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SharedLinkController extends Controller
 {
@@ -54,7 +55,11 @@ class SharedLinkController extends Controller
         $userId = auth()->id(); // ログインユーザーのIDを取得
 
         // ログインユーザーが共有リンクを持つ記事の情報を取得
-        $articles = Article::where('user_id', $userId)->has('shared_link')->with('shared_link')->get();
+        $articles = Article::join('shared_links', 'articles.id', '=', 'shared_links.article_id')
+        ->where('articles.user_id', $userId)
+        ->select('articles.id', 'articles.title', 'shared_links.created_at as shared_link_created_at')
+        ->orderBy('shared_link_created_at', 'desc')
+        ->get();
 
         return view('shared_links.index', compact('articles'));
     }
