@@ -12,7 +12,7 @@
 
             <div class="mx-auto w-100 p-4">
                 <div class="mb-1 border-bottom border-secondary pt-3">
-                    <h1>共有リンク一覧</h1>
+                    <h1>{{ __('Shared Link List') }}</h1>
                 </div>
             </div>
             <div class="flax p-4 gap-4 align-baseline m-auto">
@@ -21,8 +21,8 @@
                     <li class="list-group-item bg-transparent">
                         <div class="row">
                             <div class="col-md-8">
-                                <p>name: <a href="{{ $article->shared_link->shared_link }}" target="_blank">{{ $article->title }}</a></p>
-                                <p>Date shared: {{ $article->shared_link->created_at->format('Y-m-d') }}</p>
+                                <p>{{ __('name')}}：<a href="{{ $article->shared_link->shared_link }}" target="_blank">{{ $article->title }}</a></p>
+                                <p>{{ __('Date shared')}}：{{ $article->shared_link->created_at->format('Y-m-d') }}</p>
                             </div>
                             <div class="col-md-4 d-flex justify-content-end">
                                 <a href="{{ route('articles.show', $article->id) }}"><i class="bi bi-chat-left"></i></a>

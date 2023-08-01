@@ -39,5 +39,8 @@
     "Settings": "設定",
     "General": "一般設定",
     "Data controls": "情報管理",
-    "Manage": "管理"
+    "Manage": "管理",
+    "Shared Link List": "共有リンク一覧",
+    "name": "タイトル",
+    "Date shared": "共有日時"
 }
