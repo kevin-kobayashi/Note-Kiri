@@ -33,9 +33,9 @@
                 </ul>
             </div>
             <!-- 新規投稿作成ボタン -->
-            <div class="position-fixed bottom-0 end-0 mb-5 me-4">
+            <!-- <div class="position-fixed bottom-0 end-0 mb-5 me-4">
                 <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
-            </div>
+            </div> -->
         </main>
     </div>
 </div>
