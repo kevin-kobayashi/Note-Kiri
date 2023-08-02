@@ -7,6 +7,7 @@ use App\Models\Article;
 use App\Models\SharedLink;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class SharedLinkController extends Controller
 {
@@ -135,7 +136,9 @@ class SharedLinkController extends Controller
     public function removeAll()
     {
         $user = Auth::user();
-        $user->articles()->shared_link()->delete();
+        foreach ($user->articles as $article) {
+            $article->shared_link()->delete();
+        }
 
         return redirect()->route('shared.index');
     }

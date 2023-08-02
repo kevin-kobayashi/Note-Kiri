@@ -11,8 +11,24 @@
             <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="ms-3 border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
 
             <div class="mx-auto w-100 p-4">
-                <div class="mb-1 border-bottom border-secondary pt-3">
+                <div class="mb-1 border-bottom border-secondary pt-3 d-flex justify-content-between">
                     <h1>{{ __('Shared Link List') }}</h1>
+
+                    <div class="btn-group dropup">
+                        <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-menu-up"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                                <form action="{{ route('shared.removeAll')}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="dropdown-item link-warning">{{ __('Bulk deletion') }}</button>
+                                </form>
+                            </li>
+                        </ul>
+                        
+                    </div>
                 </div>
             </div>
             <div class="flax p-4 gap-4 align-baseline m-auto">
