@@ -23,7 +23,7 @@
                                 <form action="{{ route('shared.removeAll')}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="dropdown-item link-warning">{{ __('Bulk deletion') }}</button>
+                                    <button type="submit" class="dropdown-item link-warning">{{ __('Bulk deletion of links') }}</button>
                                 </form>
                             </li>
                         </ul>

@@ -43,5 +43,9 @@
     "Shared Link List": "共有リンク一覧",
     "name": "タイトル",
     "Date shared": "共有日時",
-    "Bulk deletion": "一括削除する"
+    "Bulk deletion of links": "共有リンクを一括削除する",
+    "Clear all articles": "すべての記事を消去する",
+    "Clear": "削除",
+    "Shared links": "共有リンク"
+    
 }
