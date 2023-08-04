@@ -21,5 +21,7 @@
             </div>
         </main>
     </div>
+    @component('layouts.footer')
+    @endcomponent
 </div>
 @endsection 
