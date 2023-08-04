@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('shared_links', function (Blueprint $table) {
             $table->unsignedBigInteger('article_id');
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
         });
     }
 
@@ -26,7 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('shared_links', function (Blueprint $table) {
-            //
+            $table->dropForeign(['article_id']);
+            $table->dropColumn('article_id');
         });
     }
 };
