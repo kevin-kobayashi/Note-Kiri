@@ -37,7 +37,7 @@
                     <li class="list-group-item bg-transparent">
                         <div class="row">
                             <div class="col-md-8">
-                                <p>{{ __('name')}}：<a href="{{ $article->shared_link->shared_link }}" target="_blank">{{ $article->title }}</a></p>
+                                <p>{{ __('name')}}：<a href="{{ $article->shared_link->url }}" target="_blank">{{ $article->title }}</a></p>
                                 <p>{{ __('Date shared')}}：{{ $article->shared_link->created_at->format('Y-m-d') }}</p>
                             </div>
                             <div class="col-md-4 d-flex justify-content-end">
@@ -55,9 +55,9 @@
                 </ul>
             </div>
             <!-- 新規投稿作成ボタン -->
-            <!-- <div class="position-fixed bottom-0 end-0 mb-5 me-4">
+            <div class="position-fixed bottom-0 end-0 mb-5 me-4">
                 <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
-            </div> -->
+            </div>
         </main>
     </div>
 </div>

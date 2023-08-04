@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('shared_links', function (Blueprint $table) {
             $table->id();
-            $table->text('shared_link');
+            $table->text('url');
             $table->timestamps();
         });
     }

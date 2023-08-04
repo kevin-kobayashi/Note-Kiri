@@ -18,7 +18,7 @@ class SharedLinkController extends Controller
         // 既存の共有リンクがある場合はそれを使用する
         $sharedLink = $article->shared_link;
         if ($sharedLink) {
-            $shareURL = $sharedLink->shared_link;
+            $shareURL = $sharedLink->url;
             return redirect($shareURL);
         } else {
             // 署名つきURLを生成
@@ -28,7 +28,7 @@ class SharedLinkController extends Controller
     
             // 共有リンクを保存
             $sharedLink = new SharedLink();
-            $sharedLink->shared_link = $shareURL;
+            $sharedLink->url = $shareURL;
             $article->shared_link()->save($sharedLink);
     
             return redirect($shareURL);
@@ -41,7 +41,7 @@ class SharedLinkController extends Controller
         $article = Article::findOrFail($id);
 
         // 共有リンクを取得（リレーションを利用）
-        $sharedLink = $article->shared_link->shared_link;
+        $sharedLink = $article->shared_link->url;
 
         return view('shared_links.show', compact('article', 'sharedLink'));
     }
