@@ -8,7 +8,7 @@
         <main class="col ps-md-2 pt-2">
 
             <!-- サイドバーのトグルボタン -->
-            <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="ms-3 border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</a>
+            <button href="#" data-bs-target="#sidebar" data-bs-toggle="offcanvas" class="btn position-fixed border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</button>
 
             <div class="mx-auto w-100 p-4">
                 <div class="mb-1 border-bottom border-secondary pt-3">
@@ -32,7 +32,7 @@
             </div>
             <!-- 新規投稿作成ボタン -->
             <div class="position-fixed bottom-0 end-0 mb-5 me-4">
-                <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
+                <a href="{{ route('articles.create') }}" class="btn btn-lg border">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
             </div>
         </main>
     </div>
