@@ -23,7 +23,7 @@
             </select>
         </form>
     </h4>
-    <button type="button" onclick="getDiceall();" class="btn"><i class="bi bi-dice-3"></i></button>
+    <button type="button" onclick="getDiceall();" class="btn"><i class="fs-1 bi bi-dice-3"></i></button>
     <div class="d-flex justify-content-center">
     <p>
         <span id="condiceall"></span>：
