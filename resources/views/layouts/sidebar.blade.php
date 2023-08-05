@@ -13,7 +13,7 @@
             
             <!-- ドロップダウンメニュー -->
             <div class="dropdown-center">
-                <button class="w-100 btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="w-100 btn btn-outline-secondary dropdown-toggle py-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-person-circle"></i> {{$username}}
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
@@ -26,8 +26,8 @@
             </form>
 
             <!-- サイコロを振るツール -->
-            @component('tools.dice_roll')
-            @endcomponent
+            <!-- @component('tools.dice_roll')
+            @endcomponent -->
 
             <!-- スロットを表示するツール -->
             @component('tools.slot')
