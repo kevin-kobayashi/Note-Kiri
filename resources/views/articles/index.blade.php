@@ -5,11 +5,10 @@
     <div class="row flex-nowrap">
         @component('layouts.sidebar')
         @endcomponent
-        <main class="col ps-md-2 pt-2">
-
-        <!-- サイドバーのトグルボタン -->
-        <button href="#" data-bs-target="#sidebar" data-bs-toggle="offcanvas" class="btn border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</button>
-
+        <main class="col ps-md-2 pt-3">
+        
+        @component('layouts.header_buttons')
+        @endcomponent
             <div class="page-header pt-3">
                 <h2>{{ __('This is  the Note-KIri main page.') }}</h2>
             </div>
