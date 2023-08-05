@@ -51,20 +51,32 @@ class SharedLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function getSharedLinks()
+    // {
+    //     $userId = auth()->id(); // ログインユーザーのIDを取得
+
+    //     // ログインユーザーが共有リンクを持つ記事の情報を取得
+    //     $articles = Article::join('shared_links', 'articles.id', '=', 'shared_links.article_id')
+    //     ->where('articles.user_id', $userId)
+    //     ->select('articles.id', 'articles.title', 'shared_links.created_at as shared_link_created_at')
+    //     ->orderBy('shared_link_created_at', 'desc')
+    //     ->get();
+
+    //     return view('shared_links.index', compact('articles'));
+    // }
     public function getSharedLinks()
     {
-        $userId = auth()->id(); // ログインユーザーのIDを取得
+        $user = auth()->user(); // ログインユーザーの情報を取得
 
         // ログインユーザーが共有リンクを持つ記事の情報を取得
-        $articles = Article::join('shared_links', 'articles.id', '=', 'shared_links.article_id')
-        ->where('articles.user_id', $userId)
-        ->select('articles.id', 'articles.title', 'shared_links.created_at as shared_link_created_at')
-        ->orderBy('shared_link_created_at', 'desc')
-        ->get();
+        $articles = $user->articles()
+            ->join('shared_links', 'articles.id', '=', 'shared_links.article_id')
+            ->select('articles.id', 'articles.title', 'shared_links.created_at as shared_link_created_at')
+            ->orderByDesc('shared_link_created_at')
+            ->get();
 
         return view('shared_links.index', compact('articles'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -82,17 +94,6 @@ class SharedLinkController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\SharedLink  $sharedLink
-     * @return \Illuminate\Http\Response
-     */
-    public function show(SharedLink $sharedLink)
     {
         //
     }
