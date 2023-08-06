@@ -1,4 +1,4 @@
-<div class="pt-5 px-1 d-flex flex-column">
+<div class="mt-2 px-1 d-flex flex-column">
     <div class="slot">
         <div class="slot-frame">
             <ul class="reels" style="list-style: none;">
