@@ -6,10 +6,8 @@
         @component('layouts.sidebar')
         @endcomponent
         <main class="col ps-md-2 pt-2">
-
-            <!-- サイドバーのトグルボタン -->
-            <button href="#" data-bs-target="#sidebar" data-bs-toggle="offcanvas" class="btn border rounded-3 p-1 text-decoration-none"><i class="bi bi-list bi-lg py-2 p-1"></i> Menu</button>
-
+            @component('layouts.header_buttons')
+            @endcomponent
             <div class="mx-auto w-100 p-4">
                 <div class="mb-1 border-bottom border-secondary pt-3 d-flex justify-content-between">
                     <h1>{{ __('Shared Link List') }}</h1>
