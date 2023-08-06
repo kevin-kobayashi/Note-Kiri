@@ -25,10 +25,6 @@
             <div class="p-4">
                 <p class="text-break">{!! nl2br(e($article->content)) !!}</p>
             </div>
-            <!-- 新規投稿作成ボタン -->
-            <div class="position-fixed bottom-0 end-0 mb-5 me-4">
-                <a href="{{ route('articles.create') }}" class="btn btn-lg border">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
-            </div>
         </main>
     </div>
 </div>
