@@ -10,13 +10,22 @@
             @endcomponent
             <div class="p-4 align-baseline">
                 <div class="border border-white p-3">
+                    @if ($errors->any())
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li class="text-dark">{{ __($error) }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <form action="{{ route('articles.store') }}" method="post">
                         @csrf
                         <div class="row mb-3">
                             <label for="article-title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="article-title" type="text" class="form-control bg-dark bg-gradient" name="title">
+                                <input id="article-title" type="text" class="form-control bg-dark bg-gradient" name="title" value="{{ old('title') }}">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -24,7 +33,7 @@
 
                             <div class="p-4 gap-4 m-auto">
                                 <div class="gap-3">
-                                    <textarea id="article-content" class="form-control bg-dark bg-gradient" name="content" rows="15"></textarea>
+                                    <textarea id="article-content" class="form-control bg-dark bg-gradient" name="content" rows="15">{{ old('content') }}</textarea>
                                 </div>
                             </div>
                         </div>

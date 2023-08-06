@@ -39,6 +39,11 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
         $user = Auth::user();
         $article = new Article();
         $article->title = $request->input('title');
@@ -82,6 +87,10 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        $validated = $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
         $article->title = $request->input('title');
         $article->content = $request->input('content');
         $article->save();
