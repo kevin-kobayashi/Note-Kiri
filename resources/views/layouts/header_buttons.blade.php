@@ -4,3 +4,4 @@
         <i class="fs-1 bi bi-gear-wide-connected py-2 px-1"></i>
     </a>
 </header>
+@include('modals.settings')
