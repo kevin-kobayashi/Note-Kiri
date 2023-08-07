@@ -46,9 +46,12 @@
     "Bulk deletion of links": "共有リンクを一括削除する",
     "Clear all articles": "すべての記事を消去する",
     "Bulk deletion": "一括削除",
-    "Clear": "削除",
+    "Clear": "削除する",
+    "Deletion Confirmation": "削除確認",
     "Shared links": "共有リンク",
     "The title field is required.": "タイトルをお書きください。",
-    "The content field is required.": "タイトル下のフォームに空欄があります。"
+    "The content field is required.": "タイトル下のフォームに空欄があります。",
+    "Do you really want to delete it?": "本当に削除しますか？",
+    "Cancel": "キャンセル"
     
 }
