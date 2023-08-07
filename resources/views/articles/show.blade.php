@@ -18,7 +18,7 @@
                             @csrf
                             <button type="submit" class="ms-3 bg-transparent"><i class="bi fs-1 bi-share"></i></button>
                         </form>
-                        <a class="ms-3" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $article->id }}"><i class="bi fs-1 bi-trash"></i></a>
+                        <button class="ms-3 bg-transparent" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $article->id }}"><i class="bi fs-1 bi-trash"></i></button>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
                     <!-- 新規投稿作成ボタン -->
                     <a href="{{ route('articles.create') }}" class="w-75 btn btn-lg border"><i class="bi bi-plus-lg"></i> {{ __('New Post') }}</a>
                     <!-- サイドバーのトグルボタン -->
-                    <button data-bs-dismiss="offcanvas" class="rounded-3 pt-0 px-3 m-2 text-decoration-none"><i class="fs-1 bi bi-layout-sidebar"></i></button>
+                    <button data-bs-dismiss="offcanvas" class="bg-transparent rounded-3 pt-0 px-3 m-2"><i class="fs-1 bi bi-layout-sidebar"></i></button>
                 </div>
 
                 <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start " style="max-height: 80vh;">
@@ -27,10 +27,9 @@
                         </ul>
                     </div>
                     <!-- サイドバーのトグルボタン -->
-                    <button data-bs-dismiss="offcanvas" class="rounded-3 pt-0 px-3 m-2 text-decoration-none"><i class="fs-1 bi bi-layout-sidebar"></i></button>
+                    <button data-bs-dismiss="offcanvas" class="bg-transparent rounded-3 pt-0 px-3 m-2"><i class="fs-1 bi bi-layout-sidebar"></i></button>
                 </div>
             </div>
-            
 
             <!-- サイコロを振るツール -->
             <!-- @component('tools.dice_roll')
@@ -39,7 +38,6 @@
             <!-- スロットを表示するツール -->
             @component('tools.slot')
             @endcomponent
-            
         </nav>
     </div>
 </div>
