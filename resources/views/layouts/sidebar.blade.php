@@ -18,7 +18,7 @@
 
                 <div class="d-flex align-items-center justify-content-center mt-2">
                     <div class="btn-group dropup">
-                        <button class="btn btn-lg btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-lg border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i> {{$username}}
                         </button>
                         <!-- ドロップダウンメニュー --> 
@@ -26,16 +26,10 @@
                             <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-box-arrow-right"></i> {{ __('Logout') }}</a></li>
                         </ul>
                     </div>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
                     <!-- サイドバーのトグルボタン -->
-                    <button data-bs-dismiss="offcanvas" class="w-25 rounded-3 pt-0  m-2 text-decoration-none"><i class="fs-1 bi bi-layout-sidebar"></i></button>
+                    <button data-bs-dismiss="offcanvas" class="rounded-3 pt-0 px-3 m-2 text-decoration-none"><i class="fs-1 bi bi-layout-sidebar"></i></button>
                 </div>
             </div>
-
-            
-            
             
 
             <!-- サイコロを振るツール -->
@@ -49,3 +43,6 @@
         </nav>
     </div>
 </div>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+    @csrf
+</form>
