@@ -42,6 +42,7 @@ class CustomVerifyEmail extends VerifyEmail
     public function toMail($notifiable)
     {
         return (new MailMessage)
+            ->subject(__('Authentication email'))
             ->line(__('Verify Your Email Address'))
             ->action(__('Verify Email Address'), $this->verificationUrl($notifiable))
             ->line(__('If you did not create an account, no further action is required.'));
