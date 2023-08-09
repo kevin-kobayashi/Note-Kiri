@@ -1,28 +1,28 @@
 // ダイスロール処理
-function getDiceall() {
-    // ロール数の取得
-    var rollSelect = document.getElementById('roll');
-    var roll = parseInt(rollSelect.options[rollSelect.selectedIndex].value);
+// function getDiceall() {
+//     // ロール数の取得
+//     var rollSelect = document.getElementById('roll');
+//     var roll = parseInt(rollSelect.options[rollSelect.selectedIndex].value);
 
-    // サイコロの目の取得
-    var menSelect = document.getElementById('men');
-    var men = parseInt(menSelect.options[menSelect.selectedIndex].value);
+//     // サイコロの目の取得
+//     var menSelect = document.getElementById('men');
+//     var men = parseInt(menSelect.options[menSelect.selectedIndex].value);
 
-    // サイコロの結果を格納する配列
-    var dataset = [];
-    for (var i = 0; i < roll; i++) {
-        var result = Math.floor(Math.random() * men + 1);
-        dataset.push(result);
-    }
-    document.getElementById('condiceall').innerHTML = dataset;
+//     // サイコロの結果を格納する配列
+//     var dataset = [];
+//     for (var i = 0; i < roll; i++) {
+//         var result = Math.floor(Math.random() * men + 1);
+//         dataset.push(result);
+//     }
+//     document.getElementById('condiceall').innerHTML = dataset;
 
-    // 合計値の計算
-    var sum = 0;
-    for (var i = 0; i < dataset.length; i++) {
-        sum += dataset[i];
-    }
-    document.getElementById('condiceallsum').innerHTML = sum;
-}
+//     // 合計値の計算
+//     var sum = 0;
+//     for (var i = 0; i < dataset.length; i++) {
+//         sum += dataset[i];
+//     }
+//     document.getElementById('condiceallsum').innerHTML = sum;
+// }
 
 
 // スロットの変数と関数の定義
@@ -184,6 +184,7 @@ $(document).ready(function () {
         Slot.stop($(this).attr('data-val'));
     });
 });
+
 
 // 共有リンク一覧モーダル
 // モーダルが表示される前にAjaxリクエストを行う
