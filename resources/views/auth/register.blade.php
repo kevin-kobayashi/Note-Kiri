@@ -2,14 +2,12 @@
 
 @section('content')
 <div class="container">
-@component('layouts.header')
-@endcomponent
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-1">
                 <div class="card-header">
-                    <h1>{{ __('Create your account') }}</h1>
-                    <p>{{__('Please note that email verification is required for sign-up.')}}</p>
+                    <h5>{{ __('Create your account') }}</h5>
+                    {{__('Please note that email verification is required for sign-up.')}}
                 </div>
 
                 <div class="card-body">
@@ -24,8 +22,7 @@
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        <strong>半角英数字をお使い下さい</strong>
+                                        <strong>{{ __($message) }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -39,41 +36,43 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        <strong>既に登録済みの可能性があります。</strong>
+                                        <strong>{{ __($message) }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                        <div class="border border border-success px-2">
+                            <div class="row mb-3">
+                                <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        <strong>下記に入力したものと一致していない可能性があります。</strong>
-                                    </span>
-                                @enderror
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ __($message) }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
-                        <div id="passwordHelpBlock" class="form-text mb-2">パスワードは半角英数字(A~Z,a~z,0~9)最低1つずつ含めた8~24文字、記号はハイフンとシャープのみ使用可能</div>
+                            <div id="passwordHelpBlock" class="form-text mb-2">
+                                {{__('At least 8 to 24 characters, including alphanumeric characters (A to Z, a to z, 0 to 9) and at least one special character (special characters: @, #, $, %, ^, &, +, =, - are allowed)')}}
+                            </div>
 
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <div class="row mb-3">
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <div class="col-md-6">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                </div>
                             </div>
                         </div>
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                             <p>{{ __('Already have an account?')}}<a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a></p>
-                                <button type="submit" class="btn btn-outline-success d-flex justify-content-center w-75">
+                                <button type="submit" class="btn btn-outline-success w-75" data-toggle="tooltip" title="登録ボタンを押してから少しお待ちください。">
                                     {{ __('Register') }}
                                 </button>
                             </div>

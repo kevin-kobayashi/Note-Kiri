@@ -25,8 +25,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        <strong>メールアドレスに誤りがある可能性があります。</strong>
+                                        <strong>{{ __($message) }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -41,20 +40,19 @@
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                        <strong>パスワードに誤りがある可能性があります。</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
-                                        <br>次回から自動的にログイン
+                                        <br>{{ __('Log in automatically next time')}}
                                     </label>
                                 </div>
                             </div>
@@ -63,16 +61,15 @@
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
 
-                                <a class="btn btn-link" href="{{ route('register') }}">{{ __("Don't have an account?")}}</a>
+                                <a class="btn btn-link mb-3" href="{{ route('register') }}">{{ __("Don't have an account?")}}</a>
 
-                                <button type="submit" class="btn btn-outline-success">
+                                <button type="submit" class="w-75 btn btn-outline-success">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link mt-3" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
-                                        <br>パスワードをお忘れの場合
                                     </a>
                                 @endif
                             </div>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-3">
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
@@ -15,16 +15,20 @@
                     @endif
 
                     {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }},
-                    <form method="POST" action="{{ route('verification.resend') }}">
-                        @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">
-                            メールを再送する
-                        </button>
-                    </form>
+                    <br>{{ __('If you did not receive the email') }}
+                    <button type="submit" class="btn btn-link p-0 m-0 align-baseline" 
+                        onclick="event.preventDefault(); document.getElementById('resend-form').submit();" data-toggle="tooltip" title="再送してから少しお待ちください。">
+                        {{ __('Resend email') }}
+                    </button>
+
                 </div>
             </div>
         </div>
     </div>
+    @component('layouts.footer')
+    @endcomponent
 </div>
-@endsection
+<form id="resend-form" method="POST" action="{{ route('verification.resend') }}" class="d-none">
+    @csrf
+</form>
+div>

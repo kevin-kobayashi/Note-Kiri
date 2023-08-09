@@ -15,7 +15,7 @@
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                            {{ __(session('status')) }}
                         </div>
                     @endif
 
@@ -30,7 +30,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{{ __($message) }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -38,7 +38,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-outline-success d-flex justify-content-center w-100">
+                                <button type="submit" class="btn btn-outline-success w-100" data-toggle="tooltip" title="送信してから少しお待ちください。">
                                     {{ __('Continue') }}
                                 </button>
                             </div>

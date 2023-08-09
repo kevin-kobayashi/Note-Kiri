@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-3">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
@@ -21,7 +21,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{{ __($message) }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -35,12 +35,14 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{{ __($message) }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
-                        <div id="passwordHelpBlock" class="form-text mb-2">パスワードは半角英数字(A~Z,a~z,0~9)最低1つずつ含めた8~24文字、記号はハイフンとシャープのみ使用可能</div>
+                        <div id="passwordHelpBlock" class="form-text mb-2">
+                            {{__('At least 8 to 24 characters, including alphanumeric characters (A to Z, a to z, 0 to 9) and at least one special character (special characters: @, #, $, %, ^, &, +, =, - are allowed)')}}
+                        </div>
 
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
@@ -62,5 +64,6 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+    @component('layouts.footer')
+    @endcomponent
+div>
