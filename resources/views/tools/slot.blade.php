@@ -39,13 +39,13 @@
             </ul>
         </div>
     </div>
-    <div class="m-auto my-5">
+    <div class="d-flex flex-column align-items-center mt-5">
         <div>
-            <button type="button" class="bg-danger btn-start"><i class="bi fs-1 bi-play"></i></button>
-            <button type="button" class="bg-primary btn-reset" disabled="true"><i class="bi fs-1 bi-arrow-counterclockwise"></i></button>
+            <button type="button" class="btn-outline-danger btn btn-lg btn-start"><i class="bi bi-play"></i></button>
+            <button type="button" class="btn-outline-primary btn btn-lg btn-reset" disabled="true"><i class="bi bi-arrow-counterclockwise"></i></button>
         </div>
         <div>
-            <button type="button" class="rounded-5 bg-warning btn-stop" data-val="0" disabled="true"><i class="text-warning bi bi-circle-fill"></i></button>
+            <button type="button" class="rounded-5 bg-warning btn-stop" data-val="0" disabled="true"><i class="text-warning bi bi-circle"></i></button>
             <button type="button" class="rounded-5 bg-warning btn-stop" data-val="1" disabled="true"><i class="text-warning bi bi-circle-fill"></i></button>
             <button type="button" class="rounded-5 bg-warning btn-stop" data-val="2" disabled="true"><i class="text-warning bi bi-circle-fill"></i></button>
         </div>

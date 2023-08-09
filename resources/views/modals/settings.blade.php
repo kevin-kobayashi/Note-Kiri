@@ -26,10 +26,10 @@
 
             <div class="col-md-8">
               <div class="tab-content">
-                <div class="tab-pane fade show active" id="general">
+                <div class="tab-pane fade" id="general">
                   <!-- ページ1の内容 -->
                   <div class="d-flex flex-column">
-                    <div class="pb-3">
+                    <div class="pb-3 mt-3">
                       <div class="d-flex align-items-center justify-content-between">
                         <div>{{__('Clear all articles')}}</div>
                         <button class="btn btn-danger" data-bs-target="#removeAllArticlesModal" data-bs-toggle="modal">{{__('Clear')}}</button>
@@ -40,7 +40,7 @@
                 <div class="tab-pane fade" id="database">
                   <!-- ページ2の内容 -->
                   <div class="d-flex flex-column">
-                    <div class="pb-3">
+                    <div class="pb-3 mt-3">
                       <div class="d-flex align-items-center justify-content-between">
                         <div>{{__('Shared links')}}</div>
                         <a href="{{ route('shared.index') }}" class="btn btn-primary">{{__('Manage')}}</a>

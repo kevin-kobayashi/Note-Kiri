@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-@component('layouts.header')
-@endcomponent
+    @component('layouts.header')
+    @endcomponent
     <div class="pt-5">
         <div class="d-flex flex-wrap mr-1 justify-content-center">
             <div class="col-xs-6 col-md-8 col-lg-6 ">
@@ -14,12 +14,14 @@
                     </div>
                     <div class="mt-20 d-flex row align-items-center">
                         <div class="mr-1">
-                            <a class="btn btn-outline-danger" href="{{route('articles.index')}}">Try NoteKiri</a>
+                            <a class="btn btn-success" href="{{route('articles.index')}}">Try NoteKiri</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @component('layouts.footer')
+    @endcomponent
 </div>
 @endsection
