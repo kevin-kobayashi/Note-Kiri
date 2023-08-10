@@ -13,7 +13,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // #articles/
+    // # articles/
     public function index()
     {
         
@@ -25,7 +25,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // #articles/create
+    // # articles/create
     public function create()
     {
         return view('articles.create');
@@ -37,6 +37,7 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // # articles/
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -60,7 +61,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // #articles/{id}
+    // # articles/{article}
     public function show(Article $article)
     {
         return view('articles.show', compact('article'));
@@ -72,7 +73,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // #articles/{id}/edit
+    // # articles/{article}/edit
     public function edit(Article $article)
     {
         return view('articles.edit', compact('article'));
@@ -85,6 +86,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
+    // # articles/{article}
     public function update(Request $request, Article $article)
     {
         $validated = $request->validate([
@@ -104,6 +106,8 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
+    // モーダルに情報を渡す都合でidを変数$articleに格納
+    // # articles/{article}
     public function destroy(Article $article)
     {
         $article->delete();
@@ -111,6 +115,7 @@ class ArticleController extends Controller
         return redirect()->route('articles.index');
     }
 
+    // # articles/removeAll
     public function removeAll()
     {
         $user = Auth::user();
