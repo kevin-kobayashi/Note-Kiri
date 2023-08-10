@@ -11,10 +11,9 @@ use Illuminate\Support\Facades\Auth;
 
 class SharedLinkController extends Controller
 {
-    public function generateShareURL($id)
+    // # articles/{article}/share
+    public function generateShareURL(Article $article)
     {
-        $article = Article::findOrFail($id);
-    
         // 既存の共有リンクがある場合はそれを使用する
         $sharedLink = $article->shared_link;
         if ($sharedLink) {
@@ -23,7 +22,7 @@ class SharedLinkController extends Controller
         } else {
             // 署名つきURLを生成
             // $shareURL = URL::temporarySignedRoute('shared.show', now()->addHours(12), ['id' => $article->id]);
-            $shareURL = URL::signedRoute('shared.show', ['id' => $article->id]);
+            $shareURL = URL::signedRoute('shared.show', $article);
 
     
             // 共有リンクを保存
@@ -36,10 +35,9 @@ class SharedLinkController extends Controller
     }
 
     // 共有リンクを表示するメソッド
-    public function showShared($id)
+    // # shared-articles/{article}
+    public function showShared(Article $article)
     {
-        $article = Article::findOrFail($id);
-
         // 共有リンクを取得（リレーションを利用）
         $sharedLink = $article->shared_link->url;
 
@@ -51,6 +49,7 @@ class SharedLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // # shared-articles/
     public function getSharedLinks()
     {
         $user = auth()->user(); // ログインユーザーの情報を取得
@@ -64,49 +63,6 @@ class SharedLinkController extends Controller
 
         return view('shared_links.index', compact('articles'));
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SharedLink  $sharedLink
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SharedLink $sharedLink)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SharedLink  $sharedLink
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, SharedLink $sharedLink)
-    {
-        
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -114,13 +70,14 @@ class SharedLinkController extends Controller
      * @param  \App\Models\SharedLink  $sharedLink
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    // # shared-articles/{article}/delete
+    public function destroy(Article $article)
     {
-        $article = Article::findOrFail($id);
         $article->shared_link->delete();
         return redirect()->route('shared.index');
     }
 
+    // # shared-articles/removeAll
     public function removeAll()
     {
         $user = Auth::user();

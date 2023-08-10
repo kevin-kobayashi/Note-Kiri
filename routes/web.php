@@ -36,12 +36,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
     ->name('home');
 
 // 共有リンクを生成するURL（POSTリクエスト）
-Route::post('/articles/{id}/share', [SharedLinkController::class, 'generateShareURL'])
+Route::post('/articles/{article}/share', [SharedLinkController::class, 'generateShareURL'])
     ->name('articles.share')
     ->middleware(['auth', 'verified']);
 
 // 共有リンクを表示する新しいページ
-Route::get('/shared-articles/{id}', [SharedLinkController::class, 'showShared'])
+Route::get('/shared-articles/{article}', [SharedLinkController::class, 'showShared'])
     ->name('shared.show')
     ->middleware('signed');
 
@@ -56,6 +56,6 @@ Route::delete('/shared-articles/removeAll', [SharedLinkController::class, 'remov
     ->middleware(['auth', 'verified']);
 
 //  共有リンクの個別削除ルート
-Route::delete('/shared-articles/{id}', [SharedLinkController::class, 'destroy'])
+Route::delete('/shared-articles/{article}/delete', [SharedLinkController::class, 'destroy'])
     ->name('shared.delete')
     ->middleware(['auth', 'verified']);

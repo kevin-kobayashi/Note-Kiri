@@ -39,9 +39,9 @@
                                     <p>{{ __('Date shared')}}：{{ $article->shared_link->created_at->format('Y-m-d') }}</p>
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-end">
-                                    <a class="btn btn-transparent" href="{{ route('articles.show', $article->id) }}"><i class="bi bi-chat-left"></i></a>
+                                    <a class="btn btn-transparent" href="{{ route('articles.show', $article) }}"><i class="bi bi-chat-left"></i></a>
 
-                                    <form action="{{ route('shared.delete', ['id' => $article->id]) }}" method="POST">
+                                    <form action="{{ route('shared.delete', $article) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="bg-transparent"><i class="bi bi-trash"></i></button>
