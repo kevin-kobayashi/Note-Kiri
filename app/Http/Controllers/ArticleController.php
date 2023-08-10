@@ -106,7 +106,6 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // モーダルに情報を渡す都合でidを変数$articleに格納
     // # articles/{article}
     public function destroy(Article $article)
     {
