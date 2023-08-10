@@ -8,7 +8,8 @@
     "The password format is invalid.": "パスワードの形式が無効です。",
     "At least 8 to 24 characters, including alphanumeric characters (A to Z, a to z, 0 to 9) and at least one special character (special characters: @, #, $, %, ^, &, +, =, - are allowed)":
         "英数字（A~Z、a~z、0~9）と特殊文字を少なくとも1文字含む、8~24文字以上（特殊文字：@、#、$、%、^、&、+、=、-、は使用可）",
-    "These credentials do not match our records.": "誤りのあるメールアドレスが入力されたか、パスワードの入力にミスがあります。",
+    "These credentials do not match our records.": "これらの情報は我々の記録と一致しません",
+    "Invalid email or password.": "誤りのあるメールアドレスが入力されたか、パスワードの入力にミスがあります",
     "Remember Me": "ログイン状態を保存する",
     "Log in automatically next time": "次回から自動的にログイン",
     "Don't have an account?": "アカウントをお持ちでない場合",
