@@ -10,11 +10,11 @@
                 <h1 class="fs-2 lh-lg">はじめに</h1>
                 <div class="mt-4 fs-5 col-md-12">
                     <div>
-                        <p>このアプリはテキストメモアプリとして作成しました。</p>
+                        <p>このアプリは、テキストメモアプリとして作成しました</p>
                     </div>
-                    <div class="mt-20 d-flex row align-items-center">
-                        <div class="mr-1">
-                            <a class="btn btn-success" href="{{route('articles.index')}}">Try NoteKiri</a>
+                    <div class="mt-20 d-flex  align-items-center">
+                        <div class="mt-3 ms-auto">
+                            <a class="btn btn-lg btn-success" href="{{route('articles.index')}}">Try NoteKiri</a>
                         </div>
                     </div>
                 </div>
