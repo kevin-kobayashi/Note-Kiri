@@ -24,7 +24,6 @@ class SharedLinkController extends Controller
             // $shareURL = URL::temporarySignedRoute('shared.show', now()->addHours(12), ['id' => $article->id]);
             $shareURL = URL::signedRoute('shared.show', $article);
 
-    
             // 共有リンクを保存
             $sharedLink = new SharedLink();
             $sharedLink->url = $shareURL;
@@ -60,7 +59,6 @@ class SharedLinkController extends Controller
             ->select('articles.id', 'articles.title', 'shared_links.created_at as shared_link_created_at')
             ->orderByDesc('shared_link_created_at')
             ->get();
-
         return view('shared_links.index', compact('articles'));
     }
 
@@ -84,7 +82,6 @@ class SharedLinkController extends Controller
         foreach ($user->articles as $article) {
             $article->shared_link()->delete();
         }
-
         return redirect()->route('shared.index');
     }
 }
