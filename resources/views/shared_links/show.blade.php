@@ -13,7 +13,7 @@
                         
                             <div>{{$article->updated_at->format('m d, Y')}}</div>
                             <!-- フォームのURL出力欄 -->
-                            <div class="ms-2">{{__('shared link:')}}</div>
+                            <div class="ms-2">{{__('Shared link')}}：</div>
                             <input class="text-info-emphasis" type="text" name="url" value="{{ $sharedLink }}" readonly>
                         
                     </div>

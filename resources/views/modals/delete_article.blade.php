@@ -13,7 +13,7 @@
                 <form action="{{ route('articles.destroy', ['article' => $article->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">{{__('Clear')}}</button>
+                    <button type="submit" class="btn btn-danger">{{__('Delete')}}</button>
                 </form>
             </div>
         </div>

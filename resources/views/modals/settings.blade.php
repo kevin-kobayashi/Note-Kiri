@@ -32,7 +32,7 @@
                     <div class="pb-3 mt-3">
                       <div class="d-flex align-items-center justify-content-between">
                         <div>{{__('Clear all articles')}}</div>
-                        <button class="btn btn-danger" data-bs-target="#removeAllArticlesModal" data-bs-toggle="modal">{{__('Clear')}}</button>
+                        <button class="btn btn-danger" data-bs-target="#removeAllArticlesModal" data-bs-toggle="modal">{{__('Delete')}}</button>
                       </div>
                     </div>
                   </div>
