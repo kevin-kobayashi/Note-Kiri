@@ -12,8 +12,8 @@
 
                 <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start " style="max-height: 80vh;">
                     @foreach ($latestArticles as $article)
-                        <a href="{{ route('articles.show', $article) }}" class="list-group-item border-end-0 d-inline-block text-truncate bg-dark bg-gradient 
-                            @if(request()->is('articles/' . $article->id)) active list-group-item-primary text-success @endif" data-bs-parent="#sidebar">{{ $article->title }}</a>
+                        <a href="{{ route('articles.show', $article) }}" class="list-group-item border-end-0 d-inline-block text-truncate bg-gradient 
+                            @if(request()->is('articles/' . $article->id)) active text-light @endif" data-bs-parent="#sidebar">{{ $article->title }}</a>
                     @endforeach
                 </div>
 
