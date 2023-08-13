@@ -37,9 +37,13 @@ class SharedLinkController extends Controller
     // # shared-articles/{article}
     public function showShared(Article $article)
     {
-        // 共有リンクを取得（リレーションを利用）
-        $sharedLink = $article->shared_link->url;
-
+        
+        if (!$article->shared_link) {
+            return view('errors.404');
+        }else{
+            // 共有リンクを取得（リレーションを利用）
+            $sharedLink = $article->shared_link->url;
+        }
         return view('shared_links.show', compact('article', 'sharedLink'));
     }
 
