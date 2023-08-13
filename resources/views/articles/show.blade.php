@@ -10,6 +10,7 @@
             @endcomponent
             <div class="mx-auto p-1">
                 <div class="border-bottom border-secondary pt-3">
+                    <h1 class="fw-bolder text-break">{{ $article->title }}</h1>
                     <div class="d-flex pt-1 align-items-end">
                         <div>{{$article->updated_at->format('m d, Y')}}</div>
 
@@ -27,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="pt-3 p-2 p-lg-5 mb-5">
                 <p class="text-break">{!! nl2br(e($article->content)) !!}</p>
             </div>
         </main>
