@@ -8,8 +8,8 @@
         <main class="col ps-md-2 pt-2">
             @component('layouts.header_buttons')
             @endcomponent
-            <div class="p-4 align-baseline">
-                <div class="border border-white p-3">
+            <div class="pt-0 mt-4 mx-2">
+                <div class="border border-white pt-2 p-3 pb-0">
                     @if ($errors->any())
                         <div class="alert alert-danger" role="alert">
                             <ul>
@@ -32,24 +32,24 @@
                         <div class="row mb-3">
                             <!-- <label for="article-content" class="col-md-4 col-form-label text-md-end">{{ __('Content') }}</label> -->
 
-                            <div class="flex p-4 gap-4 m-auto">
-                                <div class="flex flex-grow flex-col gap-3">
+                            <div class="col-lg-12 col-md-12 p-lg-5">
+                                <div>
                                     <textarea id="article-content" class="form-control bg-dark bg-gradient" name="content" rows="15">{{ old('content', str_replace('<br>', "\n", $article->content)) }}</textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4 text-start">
-                                <button type="submit" class="btn btn-lg btn-primary">{{ __('Submit') }} <i class="bi bi-chat-square-text"></i></button>
+                            <div class="col-md-6 offset-md-4 text-end">
+                                <button type="submit" class="btn btn-lg btn-primary text-end">{{ __('Submit') }} <i class="bi bi-chat-square-text"></i></button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
             <!-- 新規投稿作成ボタン -->
-            <div class="position-fixed bottom-0 end-0 mb-5 me-4">
+            <!-- <div class="position-fixed bottom-0 end-0 mb-5 me-4">
                 <a href="{{ route('articles.create') }}" class="btn btn-lg btn-success">{{ __('New Post') }} <i class="bi bi-plus-circle"></i></a>
-            </div>
+            </div> -->
         </main>
     </div>
 </div>

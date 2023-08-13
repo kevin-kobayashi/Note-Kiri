@@ -8,7 +8,7 @@
         <main class="col ps-md-2 pt-2">
             @component('layouts.header_buttons')
             @endcomponent
-            <div class="p-4 align-baseline">
+            <div class="pt-0 mt-4 mx-2">
                 <div class="border border-white p-3">
                     @if ($errors->any())
                         <div class="alert alert-danger" role="alert">
@@ -30,9 +30,8 @@
                         </div>
                         <div class="row mb-3">
                             <!-- <label for="article-content" class="col-md-4 col-form-label text-md-end">{{ __('Content') }}</label> -->
-
-                            <div class="p-4 gap-4 m-auto">
-                                <div class="gap-3">
+                            <div class="col-lg-12 col-md-12 p-lg-5">
+                                <div>
                                     <textarea id="article-content" class="form-control bg-dark bg-gradient" name="content" rows="15">{{ old('content') }}</textarea>
                                 </div>
                             </div>
