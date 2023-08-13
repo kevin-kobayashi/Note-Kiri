@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flax p-4 gap-4 align-baseline m-auto">
+            <div class="mt-2 mx-3 mb-5">
                 <ul class="list-group">
                     @foreach ($articles as $article)
                         <li class="list-group-item bg-transparent">
@@ -37,18 +37,21 @@
                                         <a class="link-underline-info link-underline-opacity-0 link-underline-opacity-100-hover" href="{{ $article->shared_link->url }}" target="_blank" data-toggle="tooltip" title="{{__('Shared link')}}">
                                             {{ $article->title }}
                                         </a>
-                                    </p>
                                     <p>{{ __('Date shared')}}：{{ $article->shared_link->created_at->format('Y-m-d') }}</p>
                                 </div>
                                 
-                                <div class="col-md-4 d-flex align-items-center justify-content-end gap-2">
+                                <div class="col-md-4 d-flex align-items-center justify-content-end gap-3">
                                     <a class="btn btn-outline-primary" href="{{ route('articles.show', $article) }}" data-toggle="tooltip" title="{{__('Jump to Article')}}">
                                         <i class="bi bi-chat-left"></i>
                                     </a>
                                     <!-- shared_delete -->
-                                    <button type="submit" class="bg-danger" onclick="event.preventDefault(); document.getElementById('delete-form').submit();" data-toggle="tooltip" title="{{__('Deletion')}}">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
+                                    <form id="delete-form" action="{{ route('shared.delete', $article) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="bg-danger" onclick="event.preventDefault(); document.getElementById('delete-form').submit();" data-toggle="tooltip" title="{{__('Deletion')}}">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </li>
@@ -61,14 +64,8 @@
             </div> -->
         </main>
     </div>
-    @component('layouts.footer')
-    @endcomponent
 </div>
-<form id="removeAll_form" action="{{ route('shared.removeAll')}}" method="POST">
-    @csrf
-    @method('DELETE')
-</form>
-<form id="delete-form" action="{{ route('shared.delete', $article) }}" method="POST">
+<form id="removeAll-form" action="{{ route('shared.removeAll')}}" method="POST">
     @csrf
     @method('DELETE')
 </form>
