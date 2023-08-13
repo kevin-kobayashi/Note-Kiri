@@ -50,8 +50,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:50', 'regex:/^[A-Za-z0-9@._-]*$/'],
-            // 半角英数字(記号があってもいい)
+            'name' => ['required', 'string', 'max:50'],
 
             'email' => ['regex:/^[A-Za-z0-9@._\-]+$/u', 'required', 'string', 'email', 'max:255', 'unique:users'],
             // 特定の制御文字や空白文字などは含まれていない

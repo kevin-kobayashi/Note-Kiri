@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller
 {
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'title' => ['required', 'max:100', 'string'],
+            'content' => ['required', 'string'],
+        ]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -40,10 +48,13 @@ class ArticleController extends Controller
     // # articles/
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-            'content' => 'required',
-        ]);
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
         $user = Auth::user();
         $article = new Article();
@@ -89,10 +100,14 @@ class ArticleController extends Controller
     // # articles/{article}
     public function update(Request $request, Article $article)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-            'content' => 'required',
-        ]);
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+        
         $article->title = $request->input('title');
         $article->content = $request->input('content');
         $article->save();
