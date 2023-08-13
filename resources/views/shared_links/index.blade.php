@@ -33,7 +33,7 @@
                         <li class="list-group-item bg-transparent">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <p>{{ __('name')}}：
+                                    <p>{{ __('Title')}}：
                                         <a class="link-underline-info link-underline-opacity-0 link-underline-opacity-100-hover" href="{{ $article->shared_link->url }}" target="_blank" data-toggle="tooltip" title="{{__('Shared link')}}">
                                             {{ $article->title }}
                                         </a>
