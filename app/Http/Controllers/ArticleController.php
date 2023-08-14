@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class ArticleController extends Controller
 {
@@ -24,7 +25,6 @@ class ArticleController extends Controller
     // # articles/
     public function index()
     {
-        
         return view('articles.index');
     }
 
@@ -75,6 +75,13 @@ class ArticleController extends Controller
     // # articles/{article}
     public function show(Article $article)
     {
+        try {
+            $this->authorize('view', $article);
+        } catch (AuthorizationException $e ) {
+            return view('errors/403');
+        }
+
+        // 閲覧が許可された場合の処理
         return view('articles.show', compact('article'));
     }
 
@@ -134,6 +141,10 @@ class ArticleController extends Controller
     {
         $user = Auth::user();
         $user->articles()->delete();
+
+        $user->articles()->onlyTrashed()
+            ->where('deleted_at', '<=', Carbon::now()->subDays(60))
+            ->forceDelete();
 
         return redirect()->route('articles.index');
     }
