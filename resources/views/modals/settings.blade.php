@@ -14,19 +14,19 @@
           <div class="row">
             <!-- ページ切り替え用のナビゲーション -->
             <div class="col-md-4">
-              <ul class="nav nav-tabs border-bottom-0 gap-3" role="tablist">
+              <ul class="nav nav-underline border-bottom-0 gap-3" role="tablist">
                 <li class="nav-item">
-                  <button class="bg-transparent rounded" data-bs-toggle="tab" href="#general"><i class="bi bi-gear"></i>  {{__('General')}}</button>
+                  <button class="rounded nav-link text-light active" data-bs-toggle="tab" href="#general" aria-selected="true"><i class="bi bi-gear"></i>  {{__('General')}}</button>
                 </li>
                 <li class="nav-item">
-                  <button class="bg-transparent rounded" data-bs-toggle="tab" href="#database"><i class="bi bi-database-gear"></i>  {{__('Data controls')}}</button>
+                  <button class="rounded nav-link text-light" data-bs-toggle="tab" href="#database" aria-selected="false"><i class="bi bi-database-gear"></i>  {{__('Data controls')}}</button>
                 </li>
               </ul>
             </div>
 
             <div class="col-md-8">
               <div class="tab-content">
-                <div class="tab-pane fade" id="general">
+                <div class="tab-pane fade show active" id="general">
                   <!-- ページ1の内容 -->
                   <div class="d-flex flex-column">
                     <div class="pb-3 mt-3">
