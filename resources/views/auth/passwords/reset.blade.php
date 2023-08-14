@@ -66,4 +66,4 @@
     </div>
     @component('layouts.footer')
     @endcomponent
-div>
+<div>
