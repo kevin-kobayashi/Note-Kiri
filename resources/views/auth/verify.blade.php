@@ -21,6 +21,12 @@
                         {{ __('Resend email') }}
                     </button>
 
+                    <!-- 削除ボタンを追加 -->
+                    <form method="POST" action="{{ route('verification.delete') }}">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">{{ __('Delete Account') }}</button>
+                    </form>
+
                 </div>
             </div>
         </div>

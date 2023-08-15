@@ -32,6 +32,11 @@ Route::resource('articles', ArticleController::class)
 
 Auth::routes(['verify' => true]);
 
+// メール認証前のアカウントの削除
+Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
+    ->middleware(['auth'])
+    ->name('verification.delete');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
     ->name('home');
 

@@ -52,4 +52,14 @@ class VerificationController extends Controller
         $request->user()->sendEmailVerificationNotification();
         return back()->with('resent', true);
     }
+
+    public function delete(Request $request)
+    {
+        $user = $request->user();
+
+        // ユーザーを削除するロジックを追加
+        $user->delete();
+
+        return redirect('/'); // 削除後のリダイレクト先を適切に設定
+    }
 }
