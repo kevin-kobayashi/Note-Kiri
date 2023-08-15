@@ -36,7 +36,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ __($message) }}</strong>
+                                        <strong>{{ __('The email address you entered may be in the wrong format or may have already been registered.') }}</strong>
                                     </span>
                                 @enderror
                             </div>
