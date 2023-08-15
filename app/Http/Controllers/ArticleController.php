@@ -22,7 +22,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // # articles/
+    // [Route('articles/', name="articles.index")]
     public function index()
     {
         return view('articles.index');
@@ -33,7 +33,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // # articles/create
+    // [Route('/articles/create', name="articles.create")]
     public function create()
     {
         return view('articles.create');
@@ -45,7 +45,7 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // # articles/
+    // [Route('articles/', name="articles.store")]
     public function store(Request $request)
     {
         $validator = $this->validator($request->all());
@@ -72,7 +72,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // # articles/{article}
+    // [Route('/articles/{article}', name="articles.show")]
     public function show(Article $article)
     {
         try {
@@ -91,7 +91,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // # articles/{article}/edit
+    // [Route('/articles/{article}/edit', name="articles.edit")]
     public function edit(Article $article)
     {
         return view('articles.edit', compact('article'));
@@ -104,7 +104,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // # articles/{article}
+    // [Route('/articles/{article}', name="articles.update")]
     public function update(Request $request, Article $article)
     {
         $validator = $this->validator($request->all());
@@ -128,7 +128,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // # articles/{article}
+    // [Route('/articles/{article}', name="articles.destroy")]
     public function destroy(Article $article)
     {
         $article->delete();
@@ -136,7 +136,7 @@ class ArticleController extends Controller
         return redirect()->route('articles.index');
     }
 
-    // # articles/removeAll
+    // [Route('/articles/removeAll', name="articles.removeAll")]
     public function removeAll()
     {
         $user = Auth::user();

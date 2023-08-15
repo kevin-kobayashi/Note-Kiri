@@ -32,7 +32,7 @@ Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
 Route::delete('/articles/removeAll', [ArticleController::class, 'removeAll'])
     ->name('articles.removeAll')
     ->middleware(['auth', 'verified']);
-    
+
 Route::resource('articles', ArticleController::class)
     ->middleware(['auth', 'verified']);
 
@@ -43,6 +43,7 @@ Route::middleware(ProtectAgainstSpam::class)->group(function() {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
     ->name('home');
+
 
 // 共有リンクを生成するURL（POSTリクエスト）
 Route::post('/articles/{article}/share', [SharedLinkController::class, 'generateShareURL'])

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class SharedLinkController extends Controller
 {
-    // # articles/{article}/share
+    // [Route('/articles/{article}/share', name="articles.share")]
     public function generateShareURL(Article $article)
     {
         // 既存の共有リンクがある場合はそれを使用する
@@ -34,7 +34,7 @@ class SharedLinkController extends Controller
     }
 
     // 共有リンクを表示するメソッド
-    // # shared-articles/{article}
+    // [Route('/shared-articles/{article}', name="shared.show")]
     public function showShared(Article $article)
     {
         
@@ -52,7 +52,7 @@ class SharedLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // # shared-articles/
+    // [Route('shared-articles/', name="shared.index")]
     public function getSharedLinks()
     {
         $user = auth()->user(); // ログインユーザーの情報を取得
@@ -69,17 +69,17 @@ class SharedLinkController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SharedLink  $sharedLink
+     * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // # shared-articles/{article}/delete
+    // [Route('/shared-articles/{article}/delete', name="shared.destroy")]
     public function destroy(Article $article)
     {
         $article->shared_link->delete();
         return redirect()->route('shared.index');
     }
 
-    // # shared-articles/removeAll
+    // [Route('/shared-articles/removeAll', name="shared.removeAll")]
     public function removeAll()
     {
         $user = Auth::user();
