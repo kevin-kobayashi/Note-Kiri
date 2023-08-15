@@ -3,6 +3,7 @@ use App\Http\Controllers\SharedLinkController;
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\Auth\VerificationController;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,21 +22,24 @@ Route::get('/', function () {
 // メールの認証期限(この)が
 Route::get('/email/resend', [VerificationController::class, 'resend'])
     ->name('verification.resend');
+// メール認証前のアカウントの削除
+Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
+    ->middleware(['auth'])
+    ->name('verification.delete');
+
 
 //サイドバーに表示されている記事を一括で削除する
 Route::delete('/articles/removeAll', [ArticleController::class, 'removeAll'])
     ->name('articles.removeAll')
     ->middleware(['auth', 'verified']);
-
+    
 Route::resource('articles', ArticleController::class)
     ->middleware(['auth', 'verified']);
 
-Auth::routes(['verify' => true]);
+Route::middleware(ProtectAgainstSpam::class)->group(function() {
+    Auth::routes(['verify' => true]);
+});
 
-// メール認証前のアカウントの削除
-Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
-    ->middleware(['auth'])
-    ->name('verification.delete');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
     ->name('home');
