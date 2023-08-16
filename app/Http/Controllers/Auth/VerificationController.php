@@ -43,16 +43,18 @@ class VerificationController extends Controller
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
 
-    // # email/resend
+    // [Route('/email/resend', name="verification.resend")]
     public function resend(Request $request)
     {
         if ($request->user()->hasVerifiedEmail()) {
             return redirect($this->redirectPath());
         }
         $request->user()->sendEmailVerificationNotification();
+        
         return back()->with('resent', true);
     }
 
+    // [Route('/email/verify/delete', name="verification.delete")]
     public function delete(Request $request)
     {
         $user = $request->user();
