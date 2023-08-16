@@ -41,6 +41,7 @@
     "If you did not receive the email": "メールが届いていなければ、",
     "click here to request another": "こちらをクリックして再送信してください。",
     "Resend email": "メールを再送する",
+    "Delete Account": "認証前のアカウントを削除",
     "Authentication email": "認証メール",
     "Please click the link below to verify your email address.": "メールアドレスを確認するために下のリンクをクリックしてください。",
     "Verify Email Address": "メールアドレス確認",
