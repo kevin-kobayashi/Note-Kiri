@@ -41,9 +41,13 @@ class ArticlePolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
+    public function edit(User $user, Article $article)
+    {
+        return $user->id === $article->user_id;
+    }
     /**
      * Determine whether the user can update the model.
      *
@@ -53,7 +57,7 @@ class ArticlePolicy
      */
     public function update(User $user, Article $article)
     {
-        //
+        return $user->id === $article->user_id;
     }
 
     /**
@@ -63,9 +67,9 @@ class ArticlePolicy
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Article $article)
+    public function destroy(User $user, Article $article)
     {
-        //
+        return $user->id === $article->user_id;
     }
 
     /**
@@ -87,8 +91,8 @@ class ArticlePolicy
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Article $article)
-    {
-        //
-    }
+    // public function forceDelete(User $user, Article $article)
+    // {
+    //     //
+    // }
 }

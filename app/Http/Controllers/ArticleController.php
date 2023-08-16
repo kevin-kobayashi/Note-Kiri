@@ -94,6 +94,12 @@ class ArticleController extends Controller
     // [Route('/articles/{article}/edit', name="articles.edit")]
     public function edit(Article $article)
     {
+        try {
+            $this->authorize('edit', $article);
+        } catch (AuthorizationException $e ) {
+            return view('errors/403');
+        }
+
         return view('articles.edit', compact('article'));
     }
 
@@ -107,6 +113,12 @@ class ArticleController extends Controller
     // [Route('/articles/{article}', name="articles.update")]
     public function update(Request $request, Article $article)
     {
+        try {
+            $this->authorize('update', $article);
+        } catch (AuthorizationException $e ) {
+            return view('errors/403');
+        }
+
         $validator = $this->validator($request->all());
 
         if ($validator->fails()) {
@@ -131,6 +143,12 @@ class ArticleController extends Controller
     // [Route('/articles/{article}', name="articles.destroy")]
     public function destroy(Article $article)
     {
+        try {
+            $this->authorize('destroy', $article);
+        } catch (AuthorizationException $e ) {
+            return view('errors/403');
+        }
+
         $article->delete();
         
         return redirect()->route('articles.index');
