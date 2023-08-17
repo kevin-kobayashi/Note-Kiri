@@ -21,6 +21,7 @@ Route::get('/', function () {
 });
 // メールの認証期限(この)が
 Route::get('/email/resend', [VerificationController::class, 'resend'])
+    ->middleware(['auth'])
     ->name('verification.resend');
 // メール認証前のアカウントの削除
 Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
