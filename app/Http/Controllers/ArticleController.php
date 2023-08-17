@@ -161,7 +161,7 @@ class ArticleController extends Controller
         $user->articles()->delete();
 
         $user->articles()->onlyTrashed()
-            ->where('deleted_at', '<=', Carbon::now()->subDays(60))
+            ->where('deleted_at', '<=', Carbon::now()->subDays(30))
             ->forceDelete();
 
         return redirect()->route('articles.index');
