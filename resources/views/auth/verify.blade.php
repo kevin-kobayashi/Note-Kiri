@@ -24,6 +24,7 @@
                 <div class="card-footer">
                     <!-- 削除ボタンを追加 -->
                     <form method="POST" action="{{ route('verification.delete') }}">
+                        @honeypot
                         @csrf
                         <p>何らかの理由で、メール認証を行う前にアカウントを削除したい場合は、以下のボタンをご利用いただけますようお願い申し上げます。</p>
                         <button type="submit" class="btn btn-light">{{ __('Delete Account') }}</button>
@@ -36,6 +37,7 @@
     @endcomponent
 </div>
 <form id="resend-form" method="POST" action="{{ route('verification.resend') }}" class="d-none">
+    @honeypot
     @csrf
 </form>
 div>
