@@ -37,7 +37,6 @@ class SharedLinkController extends Controller
     // [Route('/shared-articles/{article}', name="shared.show")]
     public function showShared(Article $article)
     {
-        
         if (!$article->shared_link) {
             return view('errors.404');
         }else{
@@ -75,6 +74,11 @@ class SharedLinkController extends Controller
     // [Route('/shared-articles/{article}/delete', name="shared.destroy")]
     public function destroy(Article $article)
     {
+        try {
+            $this->authorize('destroy', $article);
+        } catch (AuthorizationException $e ) {
+            return view('errors/403');
+        }
         $article->shared_link->delete();
         return redirect()->route('shared.index');
     }
