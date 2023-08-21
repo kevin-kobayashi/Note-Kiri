@@ -45,10 +45,10 @@
                                         <i class="bi bi-chat-left"></i>
                                     </a>
                                     <!-- shared_delete -->
-                                    <form id="delete-form" action="{{ route('shared.delete', $article) }}" method="POST">
+                                    <form action="{{ route('shared.delete', $article) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="bg-danger" onclick="event.preventDefault(); document.getElementById('delete-form').submit();" data-toggle="tooltip" title="{{__('Deletion')}}">
+                                        <button type="submit" class="bg-danger"  data-toggle="tooltip" title="{{__('Deletion')}}">
                                             <i class="bi bi-trash"></i>
                                         </button>
                                     </form>

@@ -1,15 +1,15 @@
-<div class="modal" id="removeAllArticlesModal" tabindex="-1" aria-labelledby="removeAllArticlesModalLabel" aria-hidden="true">
+<div class="modal fade" id="removeAllArticlesModal" tabindex="-1" aria-labelledby="removeAllArticlesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content bg-dark">
             <div class="modal-header">
-                <h5 class="modal-title" id="removeAllArticlesModalLabel">削除確認</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="removeAllArticlesModalLabel">{{__('Deletion Confirmation')}}</h5>
+                <button type="button" class="bg-transparent" data-bs-dismiss="modal"><i class="fs-1 bi bi-x-lg"></i></button>
             </div>
             <div class="modal-body">
-                本当に削除しますか？
+                <h5>{{ __('Do you really want to delete it?') }}</h5>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
+            <button type="button" class="btn btn-secondary" data-bs-target="#userSettings" data-bs-toggle="modal">{{__('Cancel')}}</button>
                 <form action="{{ route('articles.removeAll') }}" method="POST">
                     @csrf
                     @method('DELETE')
