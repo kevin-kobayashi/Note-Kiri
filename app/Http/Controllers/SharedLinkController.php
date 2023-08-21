@@ -71,14 +71,9 @@ class SharedLinkController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    // [Route('/shared-articles/{article}/delete', name="shared.destroy")]
-    public function destroy(Article $article)
+    // [Route('/shared-articles/{article}/delete', name="shared.delete")]
+    public function delete(Article $article)
     {
-        try {
-            $this->authorize('destroy', $article);
-        } catch (AuthorizationException $e ) {
-            return view('errors/403');
-        }
         $article->shared_link->delete();
         return redirect()->route('shared.index');
     }
