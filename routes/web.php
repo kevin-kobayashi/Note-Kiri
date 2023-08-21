@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\Auth\VerificationController;
 use Spatie\Honeypot\ProtectAgainstSpam;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::get('/email/resend', [VerificationController::class, 'resend'])
     ->middleware(['auth'])
     ->name('verification.resend');
+
 // メール認証前のアカウントの削除
 Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
     ->middleware(['auth'])
@@ -67,6 +69,11 @@ Route::delete('/shared-articles/removeAll', [SharedLinkController::class, 'remov
     ->middleware(['auth', 'verified']);
 
 //  共有リンクの個別削除ルート
-Route::delete('/shared-articles/{article}/delete', [SharedLinkController::class, 'destroy'])
+Route::delete('/shared-articles/{article}/delete', [SharedLinkController::class, 'delete'])
     ->name('shared.delete')
+    ->middleware(['auth', 'verified']);
+
+// アカウントの論理削除
+Route::post('/delete-account', [UserController::class, 'delete'])
+    ->name('delete-account')
     ->middleware(['auth', 'verified']);

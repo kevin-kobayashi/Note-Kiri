@@ -2,8 +2,7 @@
     "Welcome back": "ようこそ",
     "Login": "ログイン",
     "Email Address": "メールアドレス",
-    "The email has already been taken.": "入力されたメールアドレスの形式が間違っているか、既に登録済みの可能性があります。",
-    "The email address you entered may be in the wrong format or may have already been registered.": "入力されたメールアドレスの形式が間違っているか、既に登録済みの可能性があります。",
+    "The email address you entered may be in the wrong format or may have already been registered.": "入力されたメールアドレスのフォーマットに少し問題があるようです。登録済みの方は、別のメールアドレスを使用するか、既存のアカウントでログインしてください。",
     "Password": "パスワード",
     "The password confirmation does not match.": "下記に入力したものと一致していない可能性があります。",
     "The password format is invalid.": "パスワードの形式が無効です。",
@@ -41,7 +40,7 @@
     "If you did not receive the email": "メールが届いていなければ、",
     "click here to request another": "こちらをクリックして再送信してください。",
     "Resend email": "メールを再送する",
-    "Delete Account": "認証前のアカウントを削除",
+    "Delete Account": "アカウントを削除",
     "Authentication email": "認証メール",
     "Please click the link below to verify your email address.": "メールアドレスを確認するために下のリンクをクリックしてください。",
     "Verify Email Address": "メールアドレス確認",
@@ -72,7 +71,7 @@
     "Bulk deletion of links": "共有リンクを一括削除する",
     "Oops! The page you are looking for could not be found.": "おっと！お探しのページは見つかりませんでした。",
     "Go Back to Home": "ホームへ戻る",
-    "Clear all articles": "すべての記事を消去する",
+    "Delete all articles": "すべての記事を消去する",
     "Bulk deletion": "一括削除",
     "Delete Article": "記事削除",
     "Delete": "削除する",
@@ -82,6 +81,12 @@
     "The title field is required.": "タイトルをお書きください。",
     "The content field is required.": "テキストエリアに空欄があります。",
     "Do you really want to delete it?": "本当に削除しますか？",
-    "Cancel": "キャンセル"
-    
+    "Cancel": "キャンセル",
+    "Deleting your account is permanent and cannot be undone.": "アカウントの削除は永久的なものであり、元に戻すことはできません。",
+    "For security reasons, the same email address cannot be reused.": "セキュリティ上の理由から、同じメールアドレスを再利用することはできません。",
+    "Please note that article data may remain in our database for a certain period of time after account deletion." : "記事データは、アカウント削除後も一定期間データベースに残ることがありますので、ご了承ください。",
+    "To proceed, type「DeleteNote-KiriAccount」 in the input field below.": "下の入力欄に「DeleteNote-KiriAccount」と入力してください。",
+    "Account successfully deleted.": "アカウントは正常に削除されました。",
+    "The input was deemed invalid.": "入力が無効と判断されました。",
+    "This is a deactivated account.": "退会済みのアカウントです。"
 }

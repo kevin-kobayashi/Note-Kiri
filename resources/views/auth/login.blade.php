@@ -12,7 +12,11 @@
                 <div class="card-header">
                     {{ __('Welcome back') }}
                 </div>
-
+                @if (session('warning'))
+                <div class="alert alert-danger">
+                    {{ session('warning') }}
+                </div>
+                @endif
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @honeypot
