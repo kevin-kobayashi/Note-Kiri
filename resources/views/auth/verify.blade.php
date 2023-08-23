@@ -40,4 +40,3 @@
     @honeypot
     @csrf
 </form>
-div>

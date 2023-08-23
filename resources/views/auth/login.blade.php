@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card border-success">
-                <div class="card-header">
+                <div class="card-header fs-1">
                     {{ __('Welcome back') }}
                 </div>
                 @if (session('warning'))
