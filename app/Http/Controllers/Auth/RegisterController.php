@@ -57,6 +57,8 @@ class RegisterController extends Controller
             
             'password' => ['required', 'string', 'confirmed', 'regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=\-])(?=\S+$).{8,24}$/'],
             // 半角英数字(A~Z,a~z,0~9)最低１つずつ含めた8文字以上24文字以内(記号は@、#、$、%、^、&、+、=、-) 
+            'terms_of_service' => ['required'],
+            'privacy_policy' => ['required'],
         ]);
     }
 

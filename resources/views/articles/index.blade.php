@@ -30,6 +30,10 @@
                         </li>
                     </ul>
                 </dd>
+                <dd>
+                    <a href="{{route('terms')}}">利用規約</a>
+                    <a href="{{route('privacy-terms')}}">プライバシーポリシー</a>
+                </dd>
             </dl>
             <!-- 新規投稿作成ボタン -->
             <!-- <div class="position-fixed bottom-0 end-0 mb-5 me-4">

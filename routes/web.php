@@ -77,3 +77,12 @@ Route::delete('/shared-articles/{article}/delete', [SharedLinkController::class,
 Route::post('/delete-account', [UserController::class, 'delete'])
     ->name('delete-account')
     ->middleware(['auth', 'verified']);
+
+
+Route::get('/terms', function () {
+    return view('legal-docs.Terms_of_Use');
+})->name('terms');
+
+Route::get('/privacy-terms', function () {
+    return view('legal-docs.privacy');
+})->name('privacy-terms');
