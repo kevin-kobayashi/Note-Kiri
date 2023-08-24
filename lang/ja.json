@@ -9,7 +9,7 @@
     "The password field is required.": "パスワードの入力は必須です。",
     "The password format is invalid.": "パスワードの形式が無効です。",
     "At least 8 to 24 characters, including alphanumeric characters (A to Z, a to z, 0 to 9) and at least one special character (special characters: @, #, $, %, ^, &, +, =, - are allowed)":
-        "英数字（A~Z、a~z、0~9）と特殊文字を少なくとも1文字含む、8~24文字以上（特殊文字：@、#、$、%、^、&、+、=、-、は使用可）",
+        "英数字（A~Z、a~z、0~9）と特殊文字を少なくとも1文字含む、8~24文字（特殊文字：@、#、$、%、^、&、+、=、-、は使用可）",
     "Privacy Policy": "プライバシーポリシー",
     "Privacy Policy agreement is required.": "プライバシーポリシーの同意は必須です。",
     "Terms of Use": "利用規約",
