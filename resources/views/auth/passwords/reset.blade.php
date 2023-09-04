@@ -67,3 +67,4 @@
     @component('layouts.footer')
     @endcomponent
 <div>
+@endsection
