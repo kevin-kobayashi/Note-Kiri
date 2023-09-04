@@ -26,7 +26,7 @@
     "The name format is invalid.": "名前の形式が無効です",
     "Confirm Password": "パスワード(確認)",
     "Already have an account?": "アカウントをお持ちですか？",
-    "Register": "アカウント登録",
+    "Register": "アカウント作成",
     "Reset your password": "再設定メールの送信",
     "Enter your email address and we will send you instructions to reset your password.": "メールアドレス宛てにパスワードをリセットするための手順が送信されます。",
     "Your password has been reset!": "パスワードがリセットされました。",
