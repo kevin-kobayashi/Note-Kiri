@@ -108,4 +108,11 @@ return [
 
     'password_timeout' => 10800,
 
+    /**
+     * mail verification
+     */
+    'verification' => [
+        'expire' => 30, // メール認証リンクの有効期限（分単位）
+    ],
+
 ];
