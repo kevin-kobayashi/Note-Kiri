@@ -44,7 +44,7 @@ class LoginController extends Controller
     {
         if($user->deleted_flag) {
             Auth::logout();
-            return redirect()->route('login')->with('warning', __('This is a deactivated account.'));
+            return redirect()->route('login')->with('warning', __('This email address may not work.'));
         }
     }
 }

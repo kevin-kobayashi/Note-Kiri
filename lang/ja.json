@@ -63,6 +63,7 @@
     "The title must not be greater than 50 characters.": "タイトルは100文字以内",
     "Content": "内容",
     "Submit": "投稿", 
+    "Update": "更新",
     "Jump to Article": "記事へ飛ぶ",
     "New Post": "新規投稿",
     "Editing": "編集",
@@ -94,5 +95,5 @@
     "To proceed, type「DeleteNote-KiriAccount」 in the input field below.": "下の入力欄に「DeleteNote-KiriAccount」と入力してください。",
     "Account successfully deleted.": "アカウントは正常に削除されました。",
     "The input was deemed invalid.": "入力が無効と判断されました。",
-    "This is a deactivated account.": "退会済みのアカウントです。"
+    "This email address may not work.": "このメ―ルアドレスは使用できない可能性があります。"
 }
