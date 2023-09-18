@@ -42,20 +42,25 @@ Route::post('/email/verify/delete', [VerificationController::class, 'delete'])
 
     
 Route::middleware(['auth', 'verified'])->group(function () {
+
     //サイドバーに表示されている記事を一括で削除する
     Route::delete('/articles/removeAll', [ArticleController::class, 'removeAll'])
         ->name('articles.removeAll');
+    
     Route::resource('articles', ArticleController::class);
 
     // 共有リンクを生成するURL（POSTリクエスト）
     Route::post('/articles/{article}/share', [SharedLinkController::class, 'generateShareURL'])
         ->name('articles.share');
+
     // 共有リンク一覧を表示するページ
     Route::get('/shared-articles', [SharedLinkController::class, 'getSharedLinks'])
         ->name('shared.index');
+
     // 共有リンク一覧を一括削除
     Route::delete('/shared-articles/removeAll', [SharedLinkController::class, 'removeAll'])
         ->name('shared.removeAll');
+        
     //  共有リンクの個別削除ルート
     Route::delete('/shared-articles/{article}/delete', [SharedLinkController::class, 'delete'])
         ->name('shared.delete');
