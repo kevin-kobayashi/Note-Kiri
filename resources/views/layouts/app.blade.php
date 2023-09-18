@@ -18,8 +18,7 @@
     
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
+    @yield('scripts')
 </head>
 <body class="antialiased">
     <div id="app">
@@ -33,7 +32,9 @@
                     {{ session('failure') }}
                 </div>
             @endif
-            @yield('content')
+            <div class="p-lg-5">
+                @yield('content')
+            </div>
         </main>
     </div>
     

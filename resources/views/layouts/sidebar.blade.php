@@ -36,12 +36,10 @@
             </div>
 
             <!-- サイコロを振るツール -->
-            <!-- @component('tools.dice_roll')
-            @endcomponent -->
+            <!-- @include('tools.dice_roll') -->
 
             <!-- スロットを表示するツール -->
-            @component('tools.slot')
-            @endcomponent
+            @include('tools.slot')
         </nav>
     </div>
 </div>
@@ -49,3 +47,7 @@
     @honeypot
     @csrf
 </form>
+@section('scripts')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+@endsection
