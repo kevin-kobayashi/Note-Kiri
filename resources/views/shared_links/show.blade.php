@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    @component('layouts.header')
-    @endcomponent
+    @include('layouts.header')
     <div class="row flex-nowrap">
         <main class="col ps-md-2 pt-2">
             <div class="mx-auto w-100 p-2">

@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container">
-    @component('layouts.header')
-    @endcomponent
+    @include('layouts.header')
     <div class="row justify-content-center">
         <div class="col-md-8 text-center mt-3">
             <h1 class="display-1 text-muted">404</h1>
@@ -11,8 +10,7 @@
             <a href="{{ url('/') }}" class="btn btn-primary">{{ __('Go Back to Home') }}</a>
         </div>
     </div>
-    @component('layouts.footer')
-    @endcomponent
+    @include('layouts.footer')
 </div>
 @endsection
 

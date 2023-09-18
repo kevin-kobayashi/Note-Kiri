@@ -64,7 +64,6 @@
             </div>
         </div>
     </div>
-    @component('layouts.footer')
-    @endcomponent
+    @include('layouts.footer')
 <div>
 @endsection

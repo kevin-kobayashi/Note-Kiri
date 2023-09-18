@@ -3,12 +3,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="row flex-nowrap">
-        @component('layouts.sidebar')
-        @endcomponent
+        @include('layouts.sidebar')
         <main class="col ps-md-2 pt-3">
-        
-        @component('layouts.header_buttons')
-        @endcomponent
+            @include('layouts.header_buttons')
             <div class="page-header pt-3">
                 <h2 class="border-bottom border-danger-subtle">{{ __('This is the Note-Kiri.') }}</h2>
             </div>

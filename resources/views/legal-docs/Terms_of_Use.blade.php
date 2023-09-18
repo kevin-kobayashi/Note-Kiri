@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container">
-    @component('layouts.header')
-    @endcomponent
+    @include('layouts.header')
     <article>
         <section>
             <h1>利用規約</h1>

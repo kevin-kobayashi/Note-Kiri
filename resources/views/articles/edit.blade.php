@@ -3,11 +3,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        @component('layouts.sidebar')
-        @endcomponent
+        @include('layouts.sidebar')
         <main class="col ps-md-2 pt-2">
-            @component('layouts.header_buttons')
-            @endcomponent
+            @include('layouts.header_buttons')
             <div class="pt-0 mt-2 mx-2">
                 <div class="border border-white pt-2 p-3 pb-0">
                     
@@ -42,7 +40,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4 text-end">
-                                <button type="submit" class="btn btn-lg btn-primary text-end">{{ __('Submit') }} <i class="bi bi-chat-square-text"></i></button>
+                                <button type="submit" class="btn btn-lg btn-primary text-end">{{ __('Update') }} <i class="bi bi-chat-square-text"></i></button>
                             </div>
                         </div>
                     </form>

@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container">
-    @component('layouts.header')
-    @endcomponent
+    @include('layouts.header')
     <div class="pt-5">
         <div class="d-flex flex-wrap mr-1 justify-content-center">
             <div class="col-xs-6 col-md-8 col-lg-6 ">
@@ -21,7 +20,6 @@
             </div>
         </div>
     </div>
-    @component('layouts.footer')
-    @endcomponent
+    @include('layouts.footer')
 </div>
 @endsection

@@ -3,11 +3,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        @component('layouts.sidebar')
-        @endcomponent
+        @include('layouts.sidebar')
         <main class="col ps-md-2 pt-2">
-            @component('layouts.header_buttons')
-            @endcomponent
+            @include('layouts.header_buttons')
             <div class="pt-0 mt-2 mx-2">
                 <div class="border border-white p-3 pb-0">
                     

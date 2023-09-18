@@ -3,11 +3,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        @component('layouts.sidebar')
-        @endcomponent
+        @include('layouts.sidebar')
         <main class="ps-md-2 pt-2">
-            @component('layouts.header_buttons')
-            @endcomponent
+            @include('layouts.header_buttons')
             <div class="mx-auto p-1">
                 <div class="border-bottom border-secondary pt-3">
                     <h1 class="fw-bolder text-break">{{ $article->title }}</h1>

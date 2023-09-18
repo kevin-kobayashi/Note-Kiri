@@ -3,11 +3,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="row flex-nowrap">
-        @component('layouts.sidebar')
-        @endcomponent
+        @include('layouts.sidebar')
         <main class="col ps-md-2 pt-2">
-            @component('layouts.header_buttons')
-            @endcomponent
+            @include('layouts.header_buttons')
             <div class="mx-auto w-100 p-4">
                 <div class="mb-1 border-bottom border-secondary pt-3 d-flex justify-content-between">
                     <h1>{{ __('Shared Link List') }}</h1>

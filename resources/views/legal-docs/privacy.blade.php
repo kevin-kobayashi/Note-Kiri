@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container">
-    @component('layouts.header')
-    @endcomponent
+    @include('layouts.header')
     <article>
         <section>
         <h1>プライバシーポリシー</h1>
@@ -78,7 +77,7 @@
         </ol>
         <h2>第9条（お問い合わせ窓口）</h2>
         <p>本ポリシーに関するお問い合わせは，下記の窓口までお願いいたします。</p>
-        <p>メールアドレス：kx7787(@gmail.com)</p>
+        <p>メールアドレス：note08kiri@gmail.com</p>
         <p>以上</p>
         </section>
     </article>

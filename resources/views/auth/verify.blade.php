@@ -33,8 +33,7 @@
             </div>
         </div>
     </div>
-    @component('layouts.footer')
-    @endcomponent
+    @include('layouts.footer')
 </div>
 <form id="resend-form" method="POST" action="{{ route('verification.resend') }}" class="d-none">
     @honeypot
