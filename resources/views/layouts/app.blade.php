@@ -18,7 +18,7 @@
     
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    @yield('scripts')
+    @stack('scripts')
 </head>
 <body class="antialiased">
     <div id="app">
