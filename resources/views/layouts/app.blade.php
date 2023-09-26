@@ -20,8 +20,6 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @stack('scripts')
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6017538786866290"
-        crossorigin="anonymous"></script>
 </head>
 
 <body class="antialiased">
