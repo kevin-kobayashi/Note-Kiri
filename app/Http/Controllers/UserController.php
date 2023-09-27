@@ -9,6 +9,17 @@ use Carbon\Carbon;
 
 class UserController extends Controller
 {
+    // [Route('/email/verify/delete', name="verification.delete")]
+    public function authDelete(Request $request)
+    {
+        $user = $request->user();
+
+        // ユーザーを削除するロジックを追加
+        $user->delete();
+
+        return redirect('/'); // 削除後のリダイレクト先を適切に設定
+    }
+
     /**
      * Remove the specified resource from storage.
      *
